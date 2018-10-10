@@ -23,4 +23,8 @@
 -week 4 complete-
 
 10/5:   1.5hrs videos & activity
-10/9:   3hr videos & activity
+10/9:   1hr videos & activity
+        2hr indie project
+10/10:  .5hr ind'l project
+        3.25hr exercise
+-week 5 complete-

@@ -3,8 +3,11 @@ package matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A class to represent a user.
@@ -13,7 +16,7 @@ import java.time.temporal.ChronoUnit;
  */
 @Entity(name ="User")
 @Table(name = "user")
-public class User {
+public class User extends MainEntity {
     @Column(name = "first_name")
     private String firstName;
 
@@ -31,6 +34,8 @@ public class User {
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Workout> workouts = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -144,8 +149,36 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
+    /**
+     * Gets workouts.
+     *
+     * @return the workouts
+     */
+    public Set<Workout> getWorkouts() {
+        return workouts;
+    }
+
+    /**
+     * Sets workouts.
+     *
+     * @param workouts the workouts
+     */
+    public void setWorkouts(Set<Workout> workouts) {
+        this.workouts = workouts;
+    }
+
     public int getAge() {
         return (int)ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
+    }
+
+    public void addWorkout(Workout workout) {
+        workouts.add(workout);
+        workout.setUser(this);
+    }
+
+    public void removeWorkout(Workout workout) {
+        workouts.remove(workout);
+        workout.setUser(null);
     }
 
     @Override

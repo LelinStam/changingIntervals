@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Set;
  */
 @Entity(name ="User")
 @Table(name = "user")
-public class User extends MainEntity {
+public class User {
     @Column(name = "first_name")
     private String firstName;
 
@@ -193,5 +194,20 @@ public class User extends MainEntity {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(dateOfBirth, user.dateOfBirth);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, userName, id, dateOfBirth);
+    }
 }

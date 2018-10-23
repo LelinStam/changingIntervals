@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import java.lang.annotation.Annotation;
+import java.util.Objects;
 
 /**
  * The type role.
@@ -11,7 +12,7 @@ import java.lang.annotation.Annotation;
 
 @Entity(name = "Role")
 @Table(name = "role")
-public class Role extends MainEntity {
+public class Role {
 
 
     @Id
@@ -21,7 +22,13 @@ public class Role extends MainEntity {
 
     private String name;
 
+    @Column(name = "user_name")
+    private String userName;
+
     @ManyToOne
+    @JoinColumn(name = "user_id",
+            foreignKey = @ForeignKey(name = "role_user_id_fk")
+    )
     private User user;
 
     /**
@@ -36,9 +43,10 @@ public class Role extends MainEntity {
      * @param name        the name
      * @param user        the user
      */
-    public Role(String name, User user ) {
+    public Role(String name, User user, String userName ) {
         this.user = user;
         this.name = name;
+        this.userName = userName;
     }
 
     /**
@@ -78,6 +86,15 @@ public class Role extends MainEntity {
     }
 
     /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
      * Gets user.
      *
      * @return the user
@@ -97,11 +114,28 @@ public class Role extends MainEntity {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Role{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", user=" + user +
+                ", user name=" + userName +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Role role = (Role) o;
+        return id == role.id &&
+                Objects.equals(userName, role.userName) &&
+                Objects.equals(name, role.name);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id,  name, userName);
     }
 
 }

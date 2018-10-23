@@ -1,0 +1,174 @@
+[DEBUG] 2018-10-06 14:39:19.221 [main] UserDao - The list of users [User{firstName='Joe', lastName='Coyne', userName='jcoyne', id='1', dateOfBirth='1964-04-01', age='54}, User{firstName='Fred', lastName='Hensen', userName='fhensen', id='2', dateOfBirth='1988-05-08', age='30}, User{firstName='Barney', lastName='Curry', userName='bcurry', id='3', dateOfBirth='1947-11-11', age='70}, User{firstName='Karen', lastName='Mack', userName='kmack', id='4', dateOfBirth='1986-07-08', age='32}, User{firstName='Dianne', lastName='Klein', userName='dklein', id='5', dateOfBirth='1991-09-22', age='27}, User{firstName='Dawn', lastName='Tillman', userName='dtillman', id='6', dateOfBirth='1979-08-30', age='39}]
+[DEBUG] 2018-10-06 14:39:19.304 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 14:39:19.408 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 14:49:14.409 [main] UserDao - The list of users [User{firstName='Joe', lastName='Coyne', userName='jcoyne', id='1', dateOfBirth='1964-04-01', age='54}, User{firstName='Fred', lastName='Hensen', userName='fhensen', id='2', dateOfBirth='1988-05-08', age='30}, User{firstName='Barney', lastName='Curry', userName='bcurry', id='3', dateOfBirth='1947-11-11', age='70}, User{firstName='Karen', lastName='Mack', userName='kmack', id='4', dateOfBirth='1986-07-08', age='32}, User{firstName='Dianne', lastName='Klein', userName='dklein', id='5', dateOfBirth='1991-09-22', age='27}, User{firstName='Dawn', lastName='Tillman', userName='dtillman', id='6', dateOfBirth='1979-08-30', age='39}]
+[DEBUG] 2018-10-06 14:49:14.495 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 14:49:14.610 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 14:50:41.058 [main] UserDao - The list of users [User{firstName='Joe', lastName='Coyne', userName='jcoyne', id='1', dateOfBirth='1964-04-01', age='54}, User{firstName='Fred', lastName='Hensen', userName='fhensen', id='2', dateOfBirth='1988-05-08', age='30}, User{firstName='Barney', lastName='Curry', userName='bcurry', id='3', dateOfBirth='1947-11-11', age='70}, User{firstName='Karen', lastName='Mack', userName='kmack', id='4', dateOfBirth='1986-07-08', age='32}, User{firstName='Dianne', lastName='Klein', userName='dklein', id='5', dateOfBirth='1991-09-22', age='27}, User{firstName='Dawn', lastName='Tillman', userName='dtillman', id='6', dateOfBirth='1979-08-30', age='39}]
+[DEBUG] 2018-10-06 14:50:41.102 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 14:50:41.323 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 14:54:24.655 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 14:54:24.793 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:01:48.751 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 15:01:48.963 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:01:49.239 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-06 15:07:57.098 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 15:07:57.209 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:07:57.456 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-06 15:11:44.754 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-06 15:17:21.130 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 15:17:21.269 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:17:21.397 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-06 15:17:21.648 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-06 15:26:37.782 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 15:26:37.891 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:26:37.925 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-06 15:26:38.583 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-06 15:31:08.147 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-06 15:31:08.320 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-06 15:31:08.360 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-06 15:31:08.922 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 20:12:33.929 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 20:12:34.072 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 20:12:34.251 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 20:12:34.654 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 21:28:57.655 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 21:28:57.744 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 21:28:57.789 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 21:28:58.068 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 21:31:12.020 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 21:31:12.187 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 21:31:12.239 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 21:31:12.466 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 21:48:10.262 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 21:48:10.359 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 21:48:10.413 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 21:48:10.628 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 21:52:54.748 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 21:52:54.840 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 21:52:54.903 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 21:52:55.155 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-09 21:54:58.943 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-09 21:54:59.032 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-09 21:54:59.190 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-09 21:54:59.419 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-10 09:19:27.444 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 09:19:27.517 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 09:19:27.617 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 09:19:27.821 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-10 09:22:05.350 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 09:22:05.468 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 09:22:05.517 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 09:22:05.951 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-10 09:29:54.974 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 09:29:55.104 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 09:29:55.145 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 09:29:55.374 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-10 09:32:12.375 [main] UserDao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 09:32:12.587 [main] UserDao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 09:32:12.657 [main] UserDao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 09:32:13.358 [main] UserDao - searching for: {}Curry
+[DEBUG] 2018-10-10 13:07:23.352 [main] WorkoutDao - searching for: {}null
+[DEBUG] 2018-10-10 13:08:28.531 [main] WorkoutDao - searching for: {}Wed Mar 20 00:00:00 CDT 3918
+[DEBUG] 2018-10-10 13:19:41.169 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 13:21:09.023 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 13:51:31.931 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 14:44:08.902 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 14:47:38.304 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 14:50:21.955 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 14:51:07.306 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 14:58:29.079 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 15:18:07.863 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:19:36.755 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:22:15.410 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:23:46.102 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:24:26.690 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:24:40.160 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:24:40.990 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:24:41.505 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:24:41.730 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 15:26:05.944 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:26:06.412 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:26:06.728 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:26:06.992 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 15:45:18.265 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 15:45:18.420 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 15:45:18.710 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 15:45:19.408 [main] Dao - searching for: {}Curry
+[DEBUG] 2018-10-10 15:45:19.678 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:45:19.809 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:45:20.045 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:45:20.206 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 15:53:01.580 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 15:53:01.845 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 15:53:02.006 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 15:53:02.833 [main] Dao - searching for: {}Curry
+[DEBUG] 2018-10-10 15:53:03.021 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:53:03.135 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:53:03.370 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:53:03.537 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 15:55:35.493 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 15:55:35.651 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 15:55:35.881 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-10 15:55:36.589 [main] Dao - searching for: {}Curry
+[DEBUG] 2018-10-10 15:55:36.852 [main] WorkoutDao - Searching for user with id = 2
+[DEBUG] 2018-10-10 15:55:36.972 [main] WorkoutDao - Searching for user with workout = SKIMPS
+[DEBUG] 2018-10-10 15:55:37.160 [main] WorkoutDao - Searching for user with dateCreated = 07152018
+[DEBUG] 2018-10-10 15:55:37.383 [main] WorkoutDao - searching for: {}11022018
+[DEBUG] 2018-10-10 16:50:12.112 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-10 16:50:12.250 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-10 16:50:12.393 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-17 15:58:27.462 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-17 15:58:27.759 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-17 15:58:27.881 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:25:45.726 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:25:45.903 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:25:46.373 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:28:23.254 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:28:23.400 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:28:23.479 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:31:07.676 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:31:07.832 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:31:08.060 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:32:11.268 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:32:11.390 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:32:11.498 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:34:17.250 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:34:17.364 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:34:17.451 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:52:34.257 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:52:34.467 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:52:34.575 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:54:24.862 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:54:25.005 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:54:25.111 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:55:24.453 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:55:24.626 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:55:24.715 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:56:56.761 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:56:56.866 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:56:57.022 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:58:24.974 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:58:25.551 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:58:25.842 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 18:59:48.927 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 18:59:49.045 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 18:59:49.206 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 19:14:15.341 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 19:14:15.426 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 19:14:15.484 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 19:16:32.369 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 19:16:32.476 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 19:16:32.555 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 19:49:55.186 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 19:49:55.285 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 19:49:55.411 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 19:53:58.003 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 19:53:58.151 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 19:53:58.211 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 20:01:03.803 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 20:01:04.000 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 20:01:04.152 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-22 20:03:11.674 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-22 20:03:11.931 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-22 20:03:12.161 [main] Dao - Searching for user with firstName = Dawn

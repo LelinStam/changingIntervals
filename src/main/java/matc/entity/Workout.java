@@ -4,14 +4,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
-import java.util.Date;
+import java.util.Objects;
 
 /**
  * The type workout.
  */
 @Entity(name = "Workout")
 @Table(name = "personal_workouts")
-public class Workout extends MainEntity {
+public class Workout {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -27,6 +27,9 @@ public class Workout extends MainEntity {
     private int dateModified;
 
     @ManyToOne
+    @JoinColumn(name = "user_id",
+            foreignKey = @ForeignKey(name = "personal_workouts_user_id_fk")
+    )
     private User user;
 
     /**
@@ -38,10 +41,10 @@ public class Workout extends MainEntity {
     /**
      * Instantiates a new Workout.
      *
-     * @param workout the workout
-     * @param user    the user
-     * @param dateCreated    the date
-     * @param dateModified    the date
+     * @param workout      the workout
+     * @param dateCreated  the date
+     * @param dateModified the date
+     * @param user         the user
      */
     public Workout(String workout, int dateCreated, int dateModified, User user ) {
         this.dateCreated = dateCreated;
@@ -150,5 +153,22 @@ public class Workout extends MainEntity {
                 ", date modified='" + dateModified + '\'' +
                 ", user=" + user +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Workout workout1 = (Workout) o;
+        return id == workout1.id &&
+                dateCreated == workout1.dateCreated &&
+                dateModified == workout1.dateModified &&
+                Objects.equals(workout, workout1.workout) &&
+                Objects.equals(user, workout1.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, workout, dateCreated, dateModified, user);
     }
 }

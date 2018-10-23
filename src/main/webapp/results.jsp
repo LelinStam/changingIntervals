@@ -37,6 +37,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<td>${user.firstName} ${user.lastName}</td>
 						<td>${user.userName}</td>
 						<td>${user.age}</td>
+						<td>
+						<c:forEach var="workout" items="${user.workouts}">
+							${workout.workout} ${workout.id} <br />
+						</c:forEach>
+						</td>
 					</tr>
 				</c:forEach>
 				</tbody>
@@ -47,7 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="subscribe-w3ls">
 					<form action="#" method="post">
 						<div class="form-group1">
-							<input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+							<input type="email" id="" name="email" placeholder="Enter Your Email Address" required>
 						</div>
 						<div class="form-group2">
 							<button type="submit" class="btn btn-outline btn-lg">

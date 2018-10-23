@@ -1,3 +1,5 @@
+TIME LOG (not including class time)
+
 9/6:    2 hr videos & activities
 9/7:    1 hr videos & activities
         1 hr hw
@@ -25,6 +27,13 @@
 10/5:   1.5hrs videos & activity
 10/9:   1hr videos & activity
         2hr indie project
-10/10:  .5hr ind'l project
+10/10:  .5hr ind project
         3.25hr exercise
 -week 5 complete-
+
+10/10:  .75hr videos & activity
+10/17:  4hr exercise
+10/18:  .5hr exercise
+-week 6 complete-
+
+10/22:  2.5hr videos & activity & ind project

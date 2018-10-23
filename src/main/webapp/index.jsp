@@ -10,27 +10,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="left-grid">
         <header>
             <h1 class="Flick-grid">
-                <a href="#">Flick</a>
+                <a href="#">Swim Training</a>
+                <img src="/images/pal.png" width="85px"/>
             </h1>
             <ul class="nav">
                 <li>
-                    <a href="#">home</a>
+                    <a href="#">login</a>
                 </li>
                 <li>
-                    <a href="#">about</a>
-                </li>
-                <li>
-                    <a href="#">contact</a>
+                    <a href="#">workouts</a>
                 </li>
             </ul>
         </header>
-
-        <h2>Workout Interval Adjuster</h2>
+        <p>Sign in or Sign up to view all of our workouts offered or save and access your personal workouts!</p>
         <form action="searchUser">
             <input type="text" id="searchTerm" name="searchTerm">
-            <button type="submit" name ="submit" value="search">Search</button>
             <button type="submit" name="submit" value="viewAll">View All</button>
         </form>
+        <a href="search.jsp">Admin</a>
         <div class="sub-grid">
             <h2>lets stay in touch</h2>
             <p>Join us for FREE to get instant email updates!</p>

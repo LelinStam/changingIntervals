@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,14 +23,7 @@ class DaoTest {
 
         matc.test.util.Database database = matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
-
-        dao = new Dao();
-    }
-
-    @Test
-    void getUserByLastName() {
-        List<User> users = dao.getUsersByLastName("Curry");
-        assertEquals(1, users.size());
+        dao = new Dao(User.class);
     }
 
     /**
@@ -39,7 +31,7 @@ class DaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = dao.getById(3);
+        User retrievedUser = (User)dao.getById(3);
         assertEquals("Barney", retrievedUser.getFirstName());
         assertEquals("Curry", retrievedUser.getLastName());
         assertEquals("bcurry", retrievedUser.getUserName());
@@ -55,9 +47,8 @@ class DaoTest {
         User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"));
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = dao.getById(id);
-        assertEquals("Fred", insertedUser.getFirstName());
-        // TODO review .equals recommendations http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#mapping-model-pojo-equalshashcode
+        User insertedUser = (User)dao.getById(id);
+        assertEquals(newUser, insertedUser);
     }
 
     /**
@@ -76,10 +67,8 @@ class DaoTest {
 
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = dao.getById(id);
-        assertEquals("Fred", insertedUser.getFirstName());
-        assertEquals(1, insertedUser.getWorkouts().size());
-        // TODO review .equals recommendations http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#mapping-model-pojo-equalshashcode
+        User insertedUser = (User)dao.getById(id);
+        assertEquals(newUser, insertedUser);
     }
 
     /**
@@ -97,11 +86,11 @@ class DaoTest {
     @Test
     void updateSuccess() {
         String newLastName = "Davis";
-        User userToUpdate = dao.getById(3);
+        User userToUpdate = (User)dao.getById(3);
         userToUpdate.setLastName(newLastName);
         dao.saveOrUpdate(userToUpdate);
-        User retrievedUser = dao.getById(3);
-        assertEquals(newLastName, retrievedUser.getLastName());
+        User retrievedUser = (User)dao.getById(3);
+        assertEquals(userToUpdate, retrievedUser);
     }
 
     /**
@@ -109,7 +98,7 @@ class DaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<User> users = dao.getAllUsers();
+        List<User> users = dao.getAll();
         assertEquals(6, users.size());
     }
 

@@ -20,6 +20,7 @@ public class Role {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    @Column(name = "role_name")
     private String name;
 
     @Column(name = "user_name")

@@ -21,13 +21,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <a href="#">workouts</a>
                 </li>
             </ul>
+            <a href="search.jsp">Admin</a>
         </header>
         <p>Sign in or Sign up to view all of our workouts offered or save and access your personal workouts!</p>
         <form action="searchUser">
             <input type="text" id="searchTerm" name="searchTerm">
             <button type="submit" name="submit" value="viewAll">View All</button>
         </form>
-        <a href="search.jsp">Admin</a>
+
         <div class="sub-grid">
             <h2>lets stay in touch</h2>
             <p>Join us for FREE to get instant email updates!</p>

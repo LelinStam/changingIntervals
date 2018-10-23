@@ -11,6 +11,6 @@
     <title>search</title>
 </head>
 <body>
-
+You are successfully logged in as admin!
 </body>
 </html>

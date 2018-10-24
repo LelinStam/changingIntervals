@@ -24,34 +24,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a href="search.jsp">Admin</a>
 		</header>
 			<h2>Search Results: </h2>
-			<table id="userTable">
-				<thead>
-				<th> Name </th>
-				<th> User Name </th>
-				<th> Age </th>
-				</thead>
-				<tbody>
-				<c:choose>
-					<c:when test="${user!=null}">
+		<table id="workoutTable">
+			<thead>
+			<th> Date Created </th>
+			<th> Date Modified </th>
+			<th> Workout </th>
+			</thead>
+			<tbody>
+			<c:choose>
+				<c:when test="${workouts==null}">
+					<p>Sorry, no workouts were found matching this criteria.</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach var="workout" items="${workouts}">
 						<tr>
-							<td>${user.firstName} ${user.lastName}</td>
-							<td>${user.userName}</td>
-							<td>${user.age}</td>
+							<td>${workout.dateCreated} </td>
+							<td>${workout.dateModified}</td>
+							<td>${workout.workout}</td>
 						</tr>
-					</c:when>
-					<c:otherwise>
-						<c:forEach var="user" items="${users}">
-							<tr>
-								<td>${user.firstName} ${user.lastName}</td>
-								<td>${user.userName}</td>
-								<td>${user.age}</td>
-							</tr>
-						</c:forEach>
-					</c:otherwise>
-				</c:choose>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
+			</tbody>
+		</table>
 
-				</tbody>
-			</table>
 			<div class="sub-grid">
 				<h2>lets stay in touch</h2>
 				<p>Join us for FREE to get instant email updates!</p>

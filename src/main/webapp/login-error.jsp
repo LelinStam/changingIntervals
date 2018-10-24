@@ -11,6 +11,6 @@
     <title>Error</title>
 </head>
 <body>
-Log in failed, please re-enter your username and password.
+Log in failed, please re-enter your username and password <a href="login.jsp">here</a>
 </body>
 </html>

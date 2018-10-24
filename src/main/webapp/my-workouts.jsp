@@ -15,7 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </h1>
             <ul class="nav">
                 <li>
-                    <a href="login.php">login</a>
+                    <a href="login.jsp">login</a>
                 </li>
                 <li>
                     <a href="my-workouts.jsp">workouts</a>
@@ -23,23 +23,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </ul>
             <a href="search.jsp">Admin</a>
         </header>
-        <p>Log In</p>
-        <p>
-        <FORM ACTION="j_security_check" METHOD="POST">
-            <TABLE>
-                <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username">
-                <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password">
-                <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
-            </TABLE>
-        </FORM>
-        </p>
+        <p>View all of your saved workouts or search for a specific workout by x y or z!</p>
+        <form action="searchWorkouts">
+            <input type="text" id="searchTerm" name="searchTerm">
+
+            <button type="submit" name="submit" value="search">Search</button>
+            <button type="submit" name="submit" value="viewAll">View All</button>
+        </form>
+
         <div class="sub-grid">
             <h2>lets stay in touch</h2>
             <p>Join us for FREE to get instant email updates!</p>
             <div class="subscribe-w3ls">
                 <form action="#" method="post">
                     <div class="form-group1">
-                        <input type="email" id="" name="email" placeholder="Enter Your Email Address" required>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
                     </div>
                     <div class="form-group2">
                         <button type="submit" class="btn btn-outline btn-lg">
@@ -86,6 +84,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </body>
 
 </html>
-
-
-

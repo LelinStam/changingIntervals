@@ -1,6 +1,7 @@
 package matc.controller;
 
 import matc.entity.User;
+import matc.entity.Workout;
 import matc.persistence.Dao;
 
 import javax.servlet.RequestDispatcher;
@@ -17,21 +18,21 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/searchUser"}
+        urlPatterns = {"/searchWorkouts"}
 )
 
-public class SearchUser extends HttpServlet {
+public class SearchWorkouts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Dao dao = new Dao(User.class);
-        if (req.getParameter("submit").equals("search")) {
-            req.setAttribute("user", dao.getById(req.getParameter("searchTerm")));
-        } else {
-            req.setAttribute("users", dao.getAll());
-        }
+        Dao dao = new Dao(Workout.class);
+        //if (req.getParameter("submit").equals("search")) {
+        //    req.setAttribute("workouts", dao.getById(req.getParameter("searchTerm")));
+        //} else {
+            req.setAttribute("workouts", dao.getAll());
+        //}
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/workout-results.jsp");
         dispatcher.forward(req, resp);
     }
 }

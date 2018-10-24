@@ -37,4 +37,8 @@ TIME LOG (not including class time)
 -week 6 complete-
 
 10/22:  2.5hr videos & activity & ind project
-10/23:  1hr ind project
+10/23:  1.25hr ind project
+-week 7 complete-
+
+10/24:  3.5hr Prof. Dev. presentation
+        1hr Ind Project

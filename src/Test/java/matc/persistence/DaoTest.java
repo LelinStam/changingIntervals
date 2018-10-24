@@ -31,7 +31,7 @@ class DaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = (User)dao.getById(3);
+        User retrievedUser = (User)dao.getById("3");
         assertEquals("Barney", retrievedUser.getFirstName());
         assertEquals("Curry", retrievedUser.getLastName());
         assertEquals("bcurry", retrievedUser.getUserName());
@@ -47,7 +47,7 @@ class DaoTest {
         User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"));
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = (User)dao.getById(id);
+        User insertedUser = (User)dao.getById(Integer.toString(id));
         assertEquals(newUser, insertedUser);
     }
 
@@ -67,7 +67,7 @@ class DaoTest {
 
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = (User)dao.getById(id);
+        User insertedUser = (User)dao.getById(Integer.toString(id));
         assertEquals(newUser, insertedUser);
     }
 
@@ -76,8 +76,8 @@ class DaoTest {
      */
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getById(3));
-        assertNull(dao.getById(3));
+        dao.delete(dao.getById("3"));
+        assertNull(dao.getById("3"));
     }
 
     /**
@@ -86,10 +86,10 @@ class DaoTest {
     @Test
     void updateSuccess() {
         String newLastName = "Davis";
-        User userToUpdate = (User)dao.getById(3);
+        User userToUpdate = (User)dao.getById("3");
         userToUpdate.setLastName(newLastName);
         dao.saveOrUpdate(userToUpdate);
-        User retrievedUser = (User)dao.getById(3);
+        User retrievedUser = (User)dao.getById("3");
         assertEquals(userToUpdate, retrievedUser);
     }
 

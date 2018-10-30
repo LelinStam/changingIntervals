@@ -41,4 +41,6 @@ TIME LOG (not including class time)
 -week 7 complete-
 
 10/24:  3.5hr Prof. Dev. presentation
-        1hr Ind Project
+        3hr Ind Project
+
+10/30:  3hr Ind project

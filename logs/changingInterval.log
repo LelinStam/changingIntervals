@@ -241,3 +241,243 @@
 [DEBUG] 2018-10-24 17:35:51.452 [main] Dao - Searching for user with lastName = Curry
 [DEBUG] 2018-10-24 17:35:51.619 [main] Dao - Searching for user with lastName = c
 [DEBUG] 2018-10-24 17:35:51.704 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 17:59:55.342 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 17:59:55.553 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 17:59:55.730 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:06:38.544 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:06:38.657 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:06:38.739 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:09:03.705 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:09:03.921 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:09:04.032 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:09:55.444 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:09:55.566 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:09:55.643 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:12:41.781 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:12:41.881 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:12:41.955 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:20:10.856 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:20:10.996 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:20:11.177 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:34:18.158 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:34:18.345 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:34:18.561 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 18:55:26.997 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 18:55:27.091 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 18:55:27.139 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 19:00:50.756 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 19:00:50.850 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 19:00:50.964 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 19:15:50.421 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 19:15:50.613 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 19:15:50.782 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-24 19:19:54.768 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-24 19:19:54.898 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-24 19:19:54.993 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 09:56:09.627 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 09:56:09.909 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 09:56:10.121 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:00:29.208 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:00:29.375 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:00:29.498 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:08:33.136 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:08:33.233 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:08:33.330 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:14:59.597 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:14:59.693 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:14:59.924 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:26:51.164 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:26:51.358 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:26:51.538 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:33:00.716 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:33:00.908 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:33:01.169 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 10:59:18.718 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 10:59:18.844 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 10:59:19.015 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 11:29:57.970 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 11:29:58.199 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 11:29:58.299 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 11:35:54.966 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 11:35:55.064 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 11:35:55.133 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 11:42:51.281 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 11:42:51.422 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 11:42:51.525 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 14:17:42.529 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 14:17:46.442 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 14:17:46.928 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 14:17:46.929 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 14:17:47.321 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 14:17:47.323 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 14:17:47.497 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 14:17:47.498 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 14:17:47.804 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 14:17:47.876 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 14:17:48.042 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 14:17:48.136 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:24.975 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:28.874 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:29.354 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 16:42:29.355 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 16:42:29.469 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 16:42:29.471 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 16:42:29.546 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 16:42:29.547 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 16:42:29.730 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:29.819 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:29.943 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 16:42:30.032 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:04:57.056 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:05:00.757 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:05:01.329 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:05:01.330 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:05:01.470 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:05:01.471 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:05:01.892 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:05:01.895 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:05:02.118 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:05:02.603 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:05:02.843 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:05:02.985 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:25.911 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:29.437 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:30.136 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:12:30.137 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:12:30.381 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:12:30.382 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:12:30.517 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:12:30.518 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:12:30.612 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:30.656 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:30.738 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:12:30.919 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:26.093 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:28.841 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:29.414 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:13:29.415 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:13:29.664 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:13:29.666 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:13:29.974 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[DEBUG] 2018-10-30 20:13:29.975 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:13:30.164 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:30.322 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:30.474 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:13:30.578 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.roles' doesn't exist
+[ERROR] 2018-10-30 20:16:02.916 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:16:05.867 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:16:06.370 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:16:06.370 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:16:06.931 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:16:06.932 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:16:06.989 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:16:06.991 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:16:07.043 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:16:07.193 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:16:07.355 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:16:07.438 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:06.825 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:09.698 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:10.079 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:10.080 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:25:10.128 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:10.129 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:25:10.159 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:10.160 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:25:10.196 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:10.223 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:10.281 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:10.302 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:55.361 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:57.820 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:58.193 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:58.194 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:25:58.255 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:58.256 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:25:58.303 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:25:58.305 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:25:58.377 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:58.410 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:58.501 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:25:58.524 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:15.535 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:18.571 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:21.584 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:22.046 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:22.046 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:51:22.151 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:22.152 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:51:22.223 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:22.224 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:51:22.278 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:22.323 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:22.510 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:22.617 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:23.637 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:24.118 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:24.119 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:51:24.221 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:24.222 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:51:24.288 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-10-30 20:51:24.290 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:51:24.344 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:24.389 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:24.463 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:51:24.524 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR] 2018-10-30 20:53:50.154 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[ERROR] 2018-10-30 20:53:52.404 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[ERROR] 2018-10-30 20:53:52.706 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[DEBUG] 2018-10-30 20:53:52.707 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 20:53:52.768 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[DEBUG] 2018-10-30 20:53:52.769 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 20:53:52.829 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[DEBUG] 2018-10-30 20:53:52.831 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 20:53:52.869 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[ERROR] 2018-10-30 20:53:52.907 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[ERROR] 2018-10-30 20:53:52.967 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[ERROR] 2018-10-30 20:53:52.997 [main] Database - java.sql.SQLSyntaxErrorException: Table 'sample.test_user' doesn't exist
+[DEBUG] 2018-10-30 20:59:30.043 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 20:59:30.282 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 20:59:30.555 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 21:01:17.427 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:01:17.786 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:01:18.031 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 21:05:14.751 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:05:14.948 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:05:15.037 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 21:06:20.786 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:06:21.218 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:06:21.447 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 21:08:54.631 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:08:55.192 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:08:55.279 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 21:10:04.467 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:10:08.024 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:10:08.407 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[DEBUG] 2018-10-30 21:10:08.409 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 21:10:08.564 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[DEBUG] 2018-10-30 21:10:08.565 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 21:10:08.774 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[DEBUG] 2018-10-30 21:10:08.776 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 21:10:08.912 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:10:09.098 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:10:09.300 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:10:09.474 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_personal_workouts' doesn't exist
+[ERROR] 2018-10-30 21:11:46.375 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[ERROR] 2018-10-30 21:11:49.558 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[ERROR] 2018-10-30 21:11:49.938 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[DEBUG] 2018-10-30 21:11:49.939 [main] Dao - Searching for user with lastName = Curry
+[ERROR] 2018-10-30 21:11:50.034 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[DEBUG] 2018-10-30 21:11:50.035 [main] Dao - Searching for user with lastName = c
+[ERROR] 2018-10-30 21:11:50.085 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[DEBUG] 2018-10-30 21:11:50.087 [main] Dao - Searching for user with firstName = Dawn
+[ERROR] 2018-10-30 21:11:50.137 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[ERROR] 2018-10-30 21:11:50.175 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[ERROR] 2018-10-30 21:11:50.248 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[ERROR] 2018-10-30 21:11:50.298 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test.test_user' doesn't exist
+[DEBUG] 2018-10-30 21:12:54.157 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:12:54.623 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:12:54.702 [main] Dao - Searching for user with firstName = Dawn
+[DEBUG] 2018-10-30 21:15:03.236 [main] Dao - Searching for user with lastName = Curry
+[DEBUG] 2018-10-30 21:15:03.727 [main] Dao - Searching for user with lastName = c
+[DEBUG] 2018-10-30 21:15:03.882 [main] Dao - Searching for user with firstName = Dawn

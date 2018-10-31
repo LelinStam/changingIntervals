@@ -44,4 +44,6 @@ TIME LOG (not including class time)
         3hr Ind Project
 
 10/30:  3.25hr Ind project
-        2hr Ind Project
+        2.5hr Ind Project
+
+10/31:  3hr, 1:30pm

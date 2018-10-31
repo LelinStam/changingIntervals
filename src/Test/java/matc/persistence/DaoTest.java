@@ -35,7 +35,7 @@ class DaoTest {
         assertEquals("Barney", retrievedUser.getFirstName());
         assertEquals("Curry", retrievedUser.getLastName());
         assertEquals("bcurry", retrievedUser.getUserName());
-        //TODO compare remaining values
+        assertEquals(3, retrievedUser.getId());
     }
 
     /**
@@ -48,7 +48,7 @@ class DaoTest {
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
-        assertEquals(newUser, insertedUser);
+        assertTrue(insertedUser.equals(newUser));
     }
 
     /**
@@ -68,7 +68,7 @@ class DaoTest {
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
-        assertEquals(newUser, insertedUser);
+        assertTrue(newUser.equals(insertedUser));
     }
 
     /**
@@ -90,7 +90,7 @@ class DaoTest {
         userToUpdate.setLastName(newLastName);
         dao.saveOrUpdate(userToUpdate);
         User retrievedUser = (User)dao.getById("3");
-        assertEquals(userToUpdate, retrievedUser);
+        assertTrue(userToUpdate.equals(retrievedUser));
     }
 
     /**

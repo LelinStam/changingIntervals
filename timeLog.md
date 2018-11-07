@@ -46,4 +46,10 @@ TIME LOG (not including class time)
 10/30:  3.25hr Ind project
         2.5hr Ind Project
 
-10/31:  3hr, 1:30pm
+10/31:  3.5hr Ind project
+
+11/6:   4hr videos & activity
+-week 8 complete-
+
+11/7:   5hr videos & activity
+-week 9 complete-

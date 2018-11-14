@@ -17,8 +17,13 @@ public class RESTCreator {
 
             Dao dao = new Dao(User.class);
             List<User> users = dao.getAll();
+            StringBuilder response = new StringBuilder();
+            for(User user : users){
+                response.append("First Name: " + user.getFirstName() + " Last Name: " + user.getLastName()
+                        + " ID: " + user.getId() + " Date of Birth: " + user.getDateOfBirth() + "<br>");
+            }
             return Response.status(200)
-                    .entity("Users are : " + users)
+                    .entity("Users <br> " + response)
                     .build();
         } else {
             return Response.status(200)

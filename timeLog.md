@@ -58,3 +58,5 @@ TIME LOG (not including class time)
 11/14:  .5hr feedback
         .5hr activity
         2.5hr Team Project
+        1hr Ind Project
+-week 10 complete-

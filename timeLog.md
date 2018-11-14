@@ -53,3 +53,8 @@ TIME LOG (not including class time)
 
 11/7:   5hr videos & activity
 -week 9 complete-
+
+11/7:   1hr Team Project
+11/14:  .5hr feedback
+        .5hr activity
+        2.5hr Team Project

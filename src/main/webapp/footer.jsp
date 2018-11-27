@@ -13,6 +13,7 @@
             <div class="span3">
                 <h5>ACCOUNT</h5>
                 <a href="login.jsp">YOUR ACCOUNT</a>
+                <a href="signup.jsp">CREATE AN ACCOUNT</a>
             </div>
             <div class="span3">
                 <h5>ADMINISTRATION</h5>

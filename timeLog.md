@@ -54,9 +54,20 @@ TIME LOG (not including class time)
 11/7:   5hr videos & activity
 -week 9 complete-
 
-11/7:   1hr Team Project
+11/7:   1hr Team Project- working hibernate and entities
 11/14:  .5hr feedback
         .5hr activity
-        2.5hr Team Project
+        2.5hr Team Project- deployed to AWS
         1hr Ind Project
 -week 10 complete-
+
+11/18:  7.75hr Team Project- created REST Service
+11/20:  1hr Ind Project
+        3.5hr Team project -finalizing css of forms, hibernate bug.
+11/21:  3hr Team Project -creating JSON REST Service, add Delete User and update
+        Search User, working authentication on AWS.
+        1hr Team Project - presentation completed, hibernate bug.
+-team project complete-
+
+11/27:  5.5hr exercise
+-week 11 complete-

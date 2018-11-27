@@ -27,6 +27,8 @@ public class User {
     @Column(name = "user_name")
     private String userName;
 
+    private String password;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -38,6 +40,8 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Workout> workouts = new HashSet<>();
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<>();
     /**
      * Instantiates a new User.
      */
@@ -52,10 +56,11 @@ public class User {
      * @param userName  the user name
      * @param dateOfBirth  the date of birth
      */
-    public User(String firstName, String lastName, String userName, LocalDate dateOfBirth) {
+    public User(String firstName, String lastName, String userName,  LocalDate dateOfBirth, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
+        this.password = password;
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -133,21 +138,39 @@ public class User {
     }
 
     /**
-     * Gets date of birth.
+     * Sets new dateOfBirth.
      *
-     * @return the date of birth
+     * @param dateOfBirth New value of dateOfBirth.
+     */
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    /**
+     * Gets dateOfBirth.
+     *
+     * @return Value of dateOfBirth.
      */
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
     /**
-     * Sets date of birth.
+     * Gets password.
      *
-     * @param dateOfBirth the date of birth
+     * @return Value of password.
      */
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * Sets new password.
+     *
+     * @param password New value of password.
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**
@@ -166,6 +189,43 @@ public class User {
      */
     public void setWorkouts(Set<Workout> workouts) {
         this.workouts = workouts;
+    }
+
+    /**
+     * Gets roles.
+     *
+     * @return the roles
+     */
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
+    public void addRole(Role role) {
+        roles.add(role);
+    }
+
+    /**
+     * Remove role.
+     *
+     * @param role the role
+     */
+    public void removeRole(Role role) {
+        roles.remove(role);
+        role.setUser(null);
     }
 
     public int getAge() {
@@ -210,4 +270,7 @@ public class User {
     public int hashCode() {
         return Objects.hash(firstName, lastName, userName, id, dateOfBirth);
     }
+
+
+
 }

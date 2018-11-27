@@ -13,4 +13,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <button type="submit" name="submit" value="search">Search</button>
             <button type="submit" name="submit" value="viewAll">View All</button>
         </form>
+
 <%@include file="footer.jsp"%>

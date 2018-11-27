@@ -32,6 +32,8 @@ public class Role {
     )
     private User user;
 
+    private String role;
+
     /**
      * Instantiates a new Role.
      */
@@ -93,6 +95,24 @@ public class Role {
      */
     public String getUserName() {
         return userName;
+    }
+
+    /**
+     * Gets role.
+     *
+     * @return the role
+     */
+    public String getRole() {
+        return role;
+    }
+
+    /**
+     * Sets role.
+     *
+     * @param role the role
+     */
+    public void setRole(String role) {
+        this.role = role;
     }
 
     /**

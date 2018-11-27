@@ -44,7 +44,7 @@ class DaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"));
+        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"), "password");
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
@@ -56,7 +56,7 @@ class DaoTest {
      */
     @Test
     void insertWithWorkoutSuccess() {
-        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"));
+        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"), "password");
 
         String workout = "2x500 warmup, 2x400 free on 2:20, 300 cooldown";
         int dateCreated = 11062016;

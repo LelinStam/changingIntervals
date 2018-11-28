@@ -6,14 +6,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@include file="head-registereduser.jsp"%>
 
-		<h2>Search Results: </h2>
-		<table id="workoutTable">
-			<thead>
-				<th> Date Created </th>
-				<th> Date Modified </th>
-				<th> Workout </th>
-			</thead>
-			<tbody>
+	<div class="page-header">
+		<h3>Search Results </h3>
+	</div>
+	<table style="margin:20px;" class="table table-bordered table-striped">
+		<thead>
+		<tr>
+			<th>Date Created</th>
+			<th>Date Modified</th>
+			<th>Workout</th>
+		</tr>
+		</thead>
+		<tbody>
 			<c:choose>
 				<c:when test="${workout!=null}">
 					<tr>
@@ -34,4 +38,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</c:choose>
 			</tbody>
 		</table>
+
 <%@include file="footer.jsp"%>

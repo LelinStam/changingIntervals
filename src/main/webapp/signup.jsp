@@ -5,29 +5,63 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@include file="head.jsp"%>
-<div class="title text-center">
-    <h2>Create a New Account:</h2>
-    <p class="message">${message}</p>
-    <c:remove var="message" />
+<div id="mainBody">
+    <div class="container">
+        <div class="row">
+
+            <div class="span12">
+                <ul class="breadcrumb">
+                    <li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
+                    <li class="active">Login</li>
+                </ul>
+                <p class="message">${message}</p>
+                <c:remove var="message" />
+                <div class="row">
+                    <div class="span4">
+                        <div class="well">
+                            <h5>CREATE YOUR ACCOUNT</h5><br/>
+                            <form id="signUpForm" action="addUser" method="post">
+                                <div class="control-group">
+                                    <label class="control-label" for="username">Username</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="text" id="username" placeholder="username" required="required">
+                                    </div>
+                                    <label class="control-label" for="password">Password</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="password" id="password" placeholder="password" required="required">
+                                    </div>
+                                    <label class="control-label" for="confirmPassword">Confirm Password</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="password" id="confirmPassword" placeholder="confirmPassword" required="required">
+                                    </div>
+                                    <label class="control-label" for="firstName">First Name</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="text" id="firstName" placeholder="firstName" required="required">
+                                    </div>
+                                    <label class="control-label" for="lastName">Last Name</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="text" id="lastName" placeholder="lastName" required="required">
+                                    </div>
+                                    <label class="control-label" for="email">Email</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="text" id="email" placeholder="email" required="required">
+                                    </div>
+                                    <label class="control-label" for="dateOfBirth">Date of Birth</label>
+                                    <div class="controls">
+                                        <input class="span3"  type="date" id="dateOfBirth" placeholder="dateOfBirth" required="required">
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <button type="submit" name="submit" value="Create Account" class="btn block"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-    <form style="margin:20px;" id="signUpForm" action="addUser" method="post">
 
-        <label>Username:</label>
-        <input type="text"  name="username" required="required" />
-        <label for="password">*Password:</label>
-        <input type="password"  id="password" name="password" />
-        <label for="confirmPassword">*Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" />
-        <label for="firstName">*First Name:</label>
-        <input type="text" id="firstName" name="firstName" required="required" />
-        <label for="lastName">*Last Name:</label>
-        <input type="text"  id="lastName" name="lastName" required="required" />
-        <label for="email">*Email:</label>
-        <input type="text" id="email" name="email" required="required" /><br>
-        <label for="email">*Date of Birth:</label>
-        <input type="date" id="dateOfBirth" name="dateOfBirth" required="required" /><br>
-        <input type="submit" name="submit" value="Create Account" />
-
-    </form>
 
 <%@include file="footer.jsp"%>

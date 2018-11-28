@@ -43,19 +43,19 @@ public class AddUser extends HttpServlet {
             message = "*The username you have selected is already in use";
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
-            response.sendRedirect("signUp.jsp");
+            response.sendRedirect("signup.jsp");
         } else if (!password.equals(confirmPassword)) {
             // Check that password fields match
             message = "*The passwords you have entered do not match";
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
-            response.sendRedirect("signUp.jsp");
+            response.sendRedirect("signup.jsp");
         } else if (password.length() < 6 || confirmPassword.length() < 6) {
             // Check that password is at least 6 characters
             message = "*Your password must contain at least 6 characters";
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
-            response.sendRedirect("signUp.jsp");
+            response.sendRedirect("signup.jsp");
         } else {
             // Create objects and add to the database
             User user = new User();

@@ -5,7 +5,7 @@
 
 	<div class="span12">
     <ul class="breadcrumb">
-		<li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
+		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
 		<li class="active">Products Name</li>
     </ul>
 	<h3> Products Name <small class="pull-right"> 40 products are available </small></h3>

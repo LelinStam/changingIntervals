@@ -35,26 +35,26 @@ public class AddUser extends HttpServlet {
         Dao userDao = new Dao(User.class);
         Dao roleDao = new Dao(Role.class);
         // Validate form
-        String errorMessage;
-        List<User> usernameCheck = userDao.getByPropertyLike("username", username);
+        String message;
+        List<User> usernameCheck = userDao.getByPropertyLike("userName", username);
 
         if (usernameCheck.size() != 0) {
             // Check that username is unique
-            errorMessage = "*The username you have selected is already in use";
+            message = "*The username you have selected is already in use";
             HttpSession session = request.getSession();
-            session.setAttribute("errorMessage", errorMessage);
+            session.setAttribute("message", message);
             response.sendRedirect("signUp.jsp");
         } else if (!password.equals(confirmPassword)) {
             // Check that password fields match
-            errorMessage = "*The passwords you have entered do not match";
+            message = "*The passwords you have entered do not match";
             HttpSession session = request.getSession();
-            session.setAttribute("errorMessage", errorMessage);
+            session.setAttribute("message", message);
             response.sendRedirect("signUp.jsp");
         } else if (password.length() < 6 || confirmPassword.length() < 6) {
             // Check that password is at least 6 characters
-            errorMessage = "*Your password must contain at least 6 characters";
+            message = "*Your password must contain at least 6 characters";
             HttpSession session = request.getSession();
-            session.setAttribute("errorMessage", errorMessage);
+            session.setAttribute("message", message);
             response.sendRedirect("signUp.jsp");
         } else {
             // Create objects and add to the database
@@ -63,6 +63,7 @@ public class AddUser extends HttpServlet {
             user.setLastName(lastName);
             user.setPassword(password);
             user.setUserName(username);
+            //user.setDateOfBirth(dateOfBirth);
 
             Role role = new Role();
             role.setRole("user");
@@ -70,8 +71,12 @@ public class AddUser extends HttpServlet {
             user.addRole(role);
             userDao.insert(user);
 
+            message = "*You have successfully signed up. Please log in to access your account.";
+            HttpSession session = request.getSession();
+            session.setAttribute("message", message);
+
             // Redirect
-            response.sendRedirect("signUpConfirmation.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 }

@@ -1,3 +1,4 @@
+<%@include file="head.jsp"%>
 <%--
   Created by IntelliJ IDEA.
   User: lisac
@@ -6,11 +7,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Error</title>
-</head>
-<body>
-Log in failed, please re-enter your username and password <a href="login.jsp">here</a>
-</body>
-</html>
+
+<h1>
+    Error
+</h1>
+
+<p>Log in failed, please re-enter your username and password <a href="login.jsp">here</a>
+</p>
+<%@include file="footer.jsp"%>

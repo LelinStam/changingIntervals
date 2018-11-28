@@ -5,7 +5,11 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@include file="head.jsp"%>
-
+<div class="title text-center">
+    <h2>Create a New Account:</h2>
+    <p class="message">${message}</p>
+    <c:remove var="message" />
+</div>
     <form style="margin:20px;" id="signUpForm" action="addUser" method="post">
 
         <label>Username:</label>
@@ -20,6 +24,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <input type="text"  id="lastName" name="lastName" required="required" />
         <label for="email">*Email:</label>
         <input type="text" id="email" name="email" required="required" /><br>
+        <label for="email">*Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required="required" /><br>
         <input type="submit" name="submit" value="Create Account" />
 
     </form>

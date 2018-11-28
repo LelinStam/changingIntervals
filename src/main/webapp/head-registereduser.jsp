@@ -54,8 +54,9 @@
                 <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
             </form>
             <ul id="topMenu" class="nav pull-right">
-                <li class=""><a href="signup.jsp">Sign Up!</a></li>
-                    <a href="login.jsp" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
+                <li class=""><a href="my-workouts.jsp">My Workouts</a></li>
+                <li class=""><a href="#">Find a Workout</a></li>
+                    <a href="logout.jsp" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Logout</span></a>
                     <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false" >
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

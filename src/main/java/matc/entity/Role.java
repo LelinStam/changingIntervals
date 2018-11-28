@@ -21,7 +21,7 @@ public class Role {
     private int id;
 
     @Column(name = "role_name")
-    private String name;
+    private String role;
 
     @Column(name = "user_name")
     private String userName;
@@ -32,8 +32,6 @@ public class Role {
     )
     private User user;
 
-    private String role;
-
     /**
      * Instantiates a new Role.
      */
@@ -43,12 +41,12 @@ public class Role {
     /**
      * Instantiates a new Role.
      *
-     * @param name        the name
+     * @param role        the name
      * @param user        the user
      */
-    public Role(String name, User user, String userName ) {
+    public Role(String role, User user, String userName ) {
         this.user = user;
-        this.name = name;
+        this.role = role;
         this.userName = userName;
     }
 
@@ -71,33 +69,6 @@ public class Role {
     }
 
     /**
-     * Gets name.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets name.
-     *
-     * @param name the name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * Gets user name.
-     *
-     * @return the user name
-     */
-    public String getUserName() {
-        return userName;
-    }
-
-    /**
      * Gets role.
      *
      * @return the role
@@ -114,6 +85,16 @@ public class Role {
     public void setRole(String role) {
         this.role = role;
     }
+
+    /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
+    public String getUserName() {
+        return userName;
+    }
+
 
     /**
      * Gets user.
@@ -137,7 +118,7 @@ public class Role {
     public String toString() {
         return "Role{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", role name='" + role + '\'' +
                 ", user=" + user +
                 ", user name=" + userName +
                 '}';
@@ -150,13 +131,13 @@ public class Role {
         Role role = (Role) o;
         return id == role.id &&
                 Objects.equals(userName, role.userName) &&
-                Objects.equals(name, role.name);
+                Objects.equals(role, role.role);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id,  name, userName);
+        return Objects.hash(id,  role, userName);
     }
 
 }

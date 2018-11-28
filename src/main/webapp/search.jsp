@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@include file="head.jsp"%>
 
-        <p>Sign in or Sign up to view all of our workouts offered or save and access your personal workouts!</p>
+        <p>View all users or search for user by ID</p>
         <form action="searchUser">
             <input type="text" id="searchTerm" name="searchTerm">
 

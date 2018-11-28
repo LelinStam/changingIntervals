@@ -12,12 +12,13 @@
         <div class="row">
             <div class="span3">
                 <h5>ACCOUNT</h5>
-                <a href="login.jsp">YOUR ACCOUNT</a>
+                <a href="home-page.jsp">YOUR ACCOUNT</a>
                 <a href="signup.jsp">CREATE AN ACCOUNT</a>
+                <a href="logout.jsp">LOG OUT</a>
             </div>
             <div class="span3">
                 <h5>ADMINISTRATION</h5>
-                <a href="search.jsp">ADMIN PAGE</a>
+                <a href="home-page-admin.jsp">ADMIN PAGE</a>
             </div>
             <div id="socialMedia" class="span3 pull-right">
                 <h5>SOCIAL MEDIA </h5>

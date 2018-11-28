@@ -4,10 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<%@include file="head.jsp"%>
+<%@include file="head-administration.jsp"%>
 
         <p>View all users or search for user by ID</p>
-        <form action="searchUser">
+        <form style="margin:20px;" action="searchUser">
             <input type="text" id="searchTerm" name="searchTerm">
 
             <button type="submit" name="submit" value="search">Search</button>

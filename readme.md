@@ -16,3 +16,4 @@ measuring their heart-rate. Heart-rate can show whether a workout is tailored to
 each individual. Each part of a workout can have a goal of being within a certain
 heart rate range to achieve results. My application will help coaches and trainers
 adjust every workout depending on the heartrate of each athlete.
+ https://developer.underarmour.com/docs/v71_Heart_Rate_Zone_Calculation/

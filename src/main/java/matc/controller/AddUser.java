@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Servlet to add new user to the database.
- * @author kheise
+ * @author lclemens
  */
 @WebServlet(
         urlPatterns = {"/addUser"}
@@ -68,6 +68,7 @@ public class AddUser extends HttpServlet {
             Role role = new Role();
             role.setRole("user");
             role.setUser(user);
+            role.setUsername(username);
             user.addRole(role);
             userDao.insert(user);
 
@@ -76,7 +77,7 @@ public class AddUser extends HttpServlet {
             session.setAttribute("message", message);
 
             // Redirect
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("home-page.jsp");
         }
     }
 }

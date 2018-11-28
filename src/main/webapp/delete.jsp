@@ -11,7 +11,7 @@
 	<h3> Delete a User</h3>
 		<p class="message">${message}</p>
 		<c:remove var="message" />
-		<form id="delete" class="row" action="deleteUser" method="post">
+		<form style="margin:20px;" id="delete" class="row" action="deleteUser" method="post">
 			<div class="form-group col-sm-4">
 				<label>*ID:</label>
 				<input type="text" class="text form-control" name="id" required="required" />
@@ -25,7 +25,7 @@
 				<input type="text" class="text form-control" name="lastName" required="required" />
 			</div>
 
-			<div class="form-group col-sm-12">
+			<div class="form-group col-sm-3">
 				<input type="submit" class="button btn-block" name="submit" value="delete" />
 			</div>
 		</form>

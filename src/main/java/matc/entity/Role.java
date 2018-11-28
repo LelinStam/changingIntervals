@@ -87,6 +87,15 @@ public class Role {
     }
 
     /**
+     * Sets username.
+     *
+     * @param username the username
+     */
+    public void setUsername(String username) {
+        this.userName = username;
+    }
+
+    /**
      * Gets user name.
      *
      * @return the user name

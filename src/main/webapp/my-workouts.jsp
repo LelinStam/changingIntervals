@@ -1,4 +1,4 @@
-<%@include file="head.jsp"%>
+<%@include file="head-registereduser.jsp"%>
 <div id="mainBody">
 	<div class="container">
 	<div class="row">

@@ -20,6 +20,7 @@
     <url-pattern>/search.jsp</url-pattern>
     <url-pattern>/results.jsp</url-pattern>
     <url-pattern>/delete.jsp</url-pattern>
+    <url-pattern>/home-page-admin.jsp</url-pattern>
   </web-resource-collection>
   <auth-constraint>
     <role-name>admin</role-name>

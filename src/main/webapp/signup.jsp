@@ -24,35 +24,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="control-group">
                                     <label class="control-label" for="username">Username</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="username" placeholder="username" required="required">
+                                        <input class="span3" type="text" id="username" name="username" placeholder="username" required="required">
                                     </div>
                                     <label class="control-label" for="password">Password</label>
                                     <div class="controls">
-                                        <input class="span3"  type="password" id="password" placeholder="password" required="required">
+                                        <input class="span3"  type="password" id="password" name="password" placeholder="password" required="required">
                                     </div>
                                     <label class="control-label" for="confirmPassword">Confirm Password</label>
                                     <div class="controls">
-                                        <input class="span3"  type="password" id="confirmPassword" placeholder="confirmPassword" required="required">
+                                        <input class="span3"  type="password" id="confirmPassword" name="confirmPassword" placeholder="confirmPassword" required="required">
                                     </div>
                                     <label class="control-label" for="firstName">First Name</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="firstName" placeholder="firstName" required="required">
+                                        <input class="span3"  type="text" id="firstName" name="firstName" placeholder="firstName" required="required">
                                     </div>
                                     <label class="control-label" for="lastName">Last Name</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="lastName" placeholder="lastName" required="required">
+                                        <input class="span3"  type="text" id="lastName" name="lastName" placeholder="lastName" required="required">
                                     </div>
                                     <label class="control-label" for="email">Email</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="email" placeholder="email" required="required">
+                                        <input class="span3"  type="text" id="email" name="email" placeholder="email" required="required">
                                     </div>
                                     <label class="control-label" for="dateOfBirth">Date of Birth</label>
                                     <div class="controls">
-                                        <input class="span3"  type="date" id="dateOfBirth" placeholder="dateOfBirth" required="required">
+                                        <input class="span3"  type="date" id="dateOfBirth" name="dateOfBirth" placeholder="dateOfBirth" required="required">
                                     </div>
                                 </div>
                                 <div class="controls">
-                                    <button type="submit" name="submit" value="Create Account" class="btn block"></button>
+                                    <button type="submit" name="submit" value="Create Account" class="btn block">Create Account</button>
                                 </div>
                             </form>
                         </div>

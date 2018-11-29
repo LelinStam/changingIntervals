@@ -6,17 +6,26 @@
 	<div class="span12">
     <ul class="breadcrumb">
 		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
-		<li class="active">Products Name</li>
+		<li class="active">Workouts</li>
     </ul>
-	<h3> Products Name <small class="pull-right"> 40 products are available </small></h3>
-	<hr class="soft"/>
-        </header>
-        <p>View all of your saved workouts or search for a specific workout by ID</p>
-        <form action="/SwimTrainingPal/searchWorkouts">
-            <input type="text" id="searchTerm" name="searchTerm">
+		<h3> My Workouts </h3>
+		<p>View all of your saved workouts or search for a specific workout by key word</p>
+		<form id="searchWorkoutForm" class="row" action="searchWorkouts" method="post">
+			<div class="form-group col-sm-4">
+				<input type="text" class="text form-control" name="searchTerm" id="searchTerm" required="required" />
+			</div>
 
-            <button type="submit" name="submit" value="search">Search</button>
-            <button type="submit" name="submit" value="viewAll">View All</button>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" name="submit" value="search" class="btn">Search</button>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" name="submit" value="viewAll" class="btn">View All</button>
+				</div>
+			</div>
         </form>
 	<hr class="soft"/>
 	<form class="form-horizontal span6">

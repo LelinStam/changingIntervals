@@ -25,8 +25,19 @@ public class SearchUser extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Dao dao = new Dao(User.class);
+        boolean isValid = true;
+
         if (req.getParameter("submit").equals("search")) {
-            req.setAttribute("user", dao.getById(req.getParameter("searchTerm")));
+            try {
+                int id = Integer.parseInt(req.getParameter("searchTerm").trim());
+            } catch (NumberFormatException nfe) {
+                isValid = false;
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
+                dispatcher.forward(req, resp);
+            }
+            if(isValid) {
+                    req.setAttribute("user", dao.getById(req.getParameter("searchTerm")));
+            }
         } else {
             req.setAttribute("users", dao.getAll());
         }

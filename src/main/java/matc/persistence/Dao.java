@@ -36,13 +36,13 @@ public class Dao<T> {
      * @return the all users
      */
     public List<T> getAll() {
-        Session session = getSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        List<T> entity = session.createQuery(query).getResultList();
-        session.close();
-        return entity;
+            Session session = getSession();
+            CriteriaBuilder builder = session.getCriteriaBuilder();
+            CriteriaQuery<T> query = builder.createQuery(type);
+            Root<T> root = query.from(type);
+            List<T> entity = session.createQuery(query).getResultList();
+            session.close();
+            return entity;
     }
 
     /**

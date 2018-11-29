@@ -27,17 +27,16 @@ public class SearchWorkouts extends HttpServlet {
 
         Dao dao = new Dao(Workout.class);
         boolean isValid = true;
+        String search = req.getParameter("submit");
+        String searchTerm = req.getParameter("searchTerm");
 
-        if (req.getParameter("submit").equals("search")) {
-            try {
-                int id = Integer.parseInt(req.getParameter("searchTerm").trim());
-            } catch (NumberFormatException nfe) {
-                isValid = false;
+        if(search.equals("search")) {
+            if (!searchTerm.isEmpty() && searchTerm instanceof String) {
+            req.setAttribute("workout", dao.getByPropertyLike("workout", searchTerm));
+
+            } else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
                 dispatcher.forward(req, resp);
-            }
-            if(isValid) {
-                req.setAttribute("workout", dao.getById(req.getParameter("searchTerm")));
             }
         } else {
             req.setAttribute("workouts", dao.getAll());

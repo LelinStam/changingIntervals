@@ -5,8 +5,8 @@
 
 	<div class="span12">
     <ul class="breadcrumb">
-		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
-		<li class="active">Login</li>
+		<li><a href="home-page-admin.jsp">Admin</a> <span class="divider">/</span></li>
+		<li class="active">Delete User</li>
     </ul>
 	<h3> Delete a User</h3>
 		<p class="message">${message}</p>
@@ -24,10 +24,12 @@
 				<label for="lastName">*Last Name:</label>
 				<input type="text" class="text form-control" name="lastName" required="required" />
 			</div>
-
-			<div class="form-group col-sm-3">
-				<input type="submit" class="button btn-block" name="submit" value="delete" />
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" name="submit" value="delete" class="btn">Delete</button>
+				</div>
 			</div>
+
 		</form>
 	<hr class="soft"/>
 

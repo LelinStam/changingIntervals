@@ -10,11 +10,12 @@
     </ul>
 		<h3> My Workouts </h3>
 		<p>View all of your saved workouts or search for a specific workout by key word</p>
-		<form id="searchWorkoutForm" class="row" action="searchWorkouts" method="post">
-			<div class="form-group col-sm-4">
-				<input type="text" class="text form-control" name="searchTerm" id="searchTerm" required="required" />
+		<form action="searchWorkouts" >
+			<div class="control-group">
+			<div class="controls">
+				<input class="span3" type="text" name="searchTerm" id="searchTerm" required="required" />
 			</div>
-
+			</div>
 			<div class="control-group">
 				<div class="controls">
 					<button type="submit" name="submit" value="search" class="btn">Search</button>

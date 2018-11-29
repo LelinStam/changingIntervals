@@ -6,7 +6,7 @@
 	<div class="span12">
     <ul class="breadcrumb">
 		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
-		<li class="active">Sign Up</li>
+		<li class="active">Log In</li>
     </ul>
 		<p class="message">${message}</p>
 		<c:remove var="message" />

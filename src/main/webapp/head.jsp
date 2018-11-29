@@ -42,17 +42,7 @@
         </a>
         <div class="navbar-inner">
             <a class="brand" href="home-page.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" method="post" action="home-page.jsp" >
-                <input id="srchFld" class="srchTxt" type="text" />
-                <select class="srchTxt">
-                    <option>All</option>
-                    <option>Sprint Workouts </option>
-                    <option>Group Workouts </option>
-                    <option>Distance Workouts </option>
-                    <option>Open Water Workouts </option>
-                </select>
-                <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
-            </form>
+
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="signup.jsp">Sign Up</a></li>
                     <a href="home-page.jsp" role="button" ><span class="btn btn-large btn-success">Login</span></a>

@@ -12,7 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="span12">
                 <ul class="breadcrumb">
                     <li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
-                    <li class="active">Login</li>
+                    <li class="active">Sign Up</li>
                 </ul>
                 <p class="message">${message}</p>
                 <c:remove var="message" />

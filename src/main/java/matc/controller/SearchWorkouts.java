@@ -32,7 +32,7 @@ public class SearchWorkouts extends HttpServlet {
 
         if(search.equals("search")) {
             if (!searchTerm.isEmpty() && searchTerm instanceof String) {
-            req.setAttribute("workout", dao.getByPropertyLike("workout", searchTerm));
+            req.setAttribute("workouts", dao.getByPropertyLike("workout", searchTerm));
 
             } else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");

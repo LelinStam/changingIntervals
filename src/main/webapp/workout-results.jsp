@@ -18,25 +18,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</tr>
 		</thead>
 		<tbody>
-			<c:choose>
-				<c:when test="${workout!=null}">
-					<tr>
-						<td>${workout.dateCreated} </td>
-						<td>${workout.dateModified}</td>
-						<td>${workout.workout}</td>
-					</tr>
-				</c:when>
-				<c:otherwise>
-					<c:forEach var="workout" items="${workouts}">
-						<tr>
-							<td>${workout.dateCreated} </td>
-							<td>${workout.dateModified}</td>
-							<td>${workout.workout}</td>
-						</tr>
-					</c:forEach>
-				</c:otherwise>
-			</c:choose>
-			</tbody>
-		</table>
+		<c:forEach var="workout" items="${workouts}">
+			<tr>
+				<td>${workout.dateCreated} </td>
+				<td>${workout.dateModified}</td>
+				<td>${workout.workout}</td>
+			</tr>
+		</c:forEach>
+		</tbody>
+	</table>
 
 <%@include file="footer.jsp"%>

@@ -6,42 +6,39 @@
 	<div class="span12">
     <ul class="breadcrumb">
 		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
-		<li class="active">Workouts</li>
+		<li class="active">New Workout</li>
     </ul>
-		<h3> My Workouts </h3>
-		<p>View all of your saved workouts or search for a specific workout by key word</p>
-		<form action="searchWorkouts" >
+		<h3> New Workout </h3>
+		<p class="message">${message}</p>
+		<c:remove var="message" />
+		<p>Please fill out the form to create your new workout</p>
+		<form action="addWorkout" method="post">
 			<div class="control-group">
-			<div class="controls">
-				<input class="span3" type="text" name="searchTerm" id="searchTerm" />
-			</div>
-			</div>
-			<div class="control-group">
+				<label class="control-label" for="userId">Your User ID</label>
 				<div class="controls">
-					<button type="submit" name="submit" value="search" class="btn">Search</button>
+					<input type="text" class="span3"  id="userId" name="userId" placeholder="User ID">
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="workout">Workout</label>
+				<div class="controls">
+					<input class="span3"  type="text" id="workout" name="workout" placeholder="Workout">
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="mileage">Total Mileage</label>
+				<div class="controls">
+					<input type="text" class="span3"  id="mileage" name="mileage" placeholder="Mileage">
 				</div>
 			</div>
 
+
 			<div class="control-group">
 				<div class="controls">
-					<button type="submit" name="submit" value="viewAll" class="btn">View All</button>
+					<button type="submit" name="submit" value="submit" class="btn">Submit</button>
 				</div>
 			</div>
         </form>
-
-	<h3> Total Mileage </h3>
-	<p>To view your mileage over time,
-		<form action="getGraph" method="get" >
-		<div class="control-group">
-			<div class="controls">
-				<button type="submit" name="submit" value="submit" class="btn">Click here</button>
-			</div>
-		</div>
-		</form>
-	</p>
-
-	${image}
-
 	<hr class="soft"/>
 	<form class="form-horizontal span6">
 		<div class="control-group">

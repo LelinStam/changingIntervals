@@ -25,8 +25,6 @@ public class DeleteUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get Form Parameters
         String id = request.getParameter("id");
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
 
         // Create Dao
         Dao userDao = new Dao(User.class);
@@ -34,6 +32,7 @@ public class DeleteUser extends HttpServlet {
         // Validate form
         String message;
         User userToDelete = (User)userDao.getById(id);
+        String firstName = userToDelete.getFirstName();
 
         if (userToDelete == null) {
             // Check that id exists

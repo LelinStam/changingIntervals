@@ -4,8 +4,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -18,6 +21,8 @@ import java.util.Set;
 @Entity(name ="User")
 @Table(name = "user")
 public class User {
+
+
     @Column(name = "first_name")
     private String firstName;
 
@@ -35,7 +40,7 @@ public class User {
     private int id;
 
     @Column(name = "date_of_birth")
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Workout> workouts = new HashSet<>();
@@ -56,7 +61,7 @@ public class User {
      * @param userName  the user name
      * @param dateOfBirth  the date of birth
      */
-    public User(String firstName, String lastName, String userName,  LocalDate dateOfBirth, String password) {
+    public User(String firstName, String lastName, String userName,  Date dateOfBirth, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -142,7 +147,7 @@ public class User {
      *
      * @param dateOfBirth New value of dateOfBirth.
      */
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -151,7 +156,7 @@ public class User {
      *
      * @return Value of dateOfBirth.
      */
-    public LocalDate getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -228,8 +233,15 @@ public class User {
         role.setUser(null);
     }
 
+
     public int getAge() {
-        return (int)ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
+        int age;
+        if(dateOfBirth != null) {
+            age = (int)ChronoUnit.YEARS.between(convertToLocalDateViaMilisecond(dateOfBirth), LocalDate.now());
+        } else {
+            age = 0;
+        }
+        return age;
     }
 
     public void addWorkout(Workout workout) {
@@ -271,6 +283,10 @@ public class User {
         return Objects.hash(firstName, lastName, userName, id, dateOfBirth);
     }
 
-
+    public LocalDate convertToLocalDateViaMilisecond(Date dateToConvert) {
+        return Instant.ofEpochMilli(dateToConvert.getTime())
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+    }
 
 }

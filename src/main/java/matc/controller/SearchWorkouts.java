@@ -10,7 +10,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * A simple servlet to welcome the user.
@@ -39,7 +41,12 @@ public class SearchWorkouts extends HttpServlet {
                 dispatcher.forward(req, resp);
             }
         } else {
-            req.setAttribute("workouts", dao.getAll());
+            HttpSession session = req.getSession(false);
+            String username = req.getRemoteUser();
+            Dao userDao = new Dao(User.class);
+            List<User> user = userDao.getByPropertyEqual("username", username);
+            User currentUser = user.get(0);
+            req.setAttribute("workouts", currentUser.getWorkouts());
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/workout-results.jsp");

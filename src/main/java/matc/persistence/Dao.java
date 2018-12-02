@@ -3,7 +3,6 @@ package matc.persistence;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -123,6 +122,8 @@ public class Dao<T> {
         session.close();
         return entity;
     }
+
+
 
     /**
      * Get user by property (like)

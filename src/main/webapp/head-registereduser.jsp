@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -54,7 +53,7 @@
             </form>
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="my-workouts.jsp">My Workouts</a></li>
-                <li class=""><a href="#">Find a Workout</a></li>
+                <li class=""><a href="new-workout.jsp">Create a Workout</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 
                 </li>

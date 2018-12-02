@@ -2,6 +2,7 @@ package matc.controller;
 
 import matc.entity.*;
 import matc.persistence.Dao;
+import org.apache.logging.log4j.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,6 +27,7 @@ import java.util.List;
 public class AddUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        final Logger logger = LogManager.getLogger(this.getClass());
         // Get Form Parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -30,6 +35,7 @@ public class AddUser extends HttpServlet {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
+        String dateOfBirth = request.getParameter("dateOfBirth");
 
         // Create Daos
         Dao userDao = new Dao(User.class);
@@ -63,7 +69,14 @@ public class AddUser extends HttpServlet {
             user.setLastName(lastName);
             user.setPassword(password);
             user.setUserName(username);
-            //user.setDateOfBirth(dateOfBirth);
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                Date parsed = format.parse(dateOfBirth);
+                user.setDateOfBirth(parsed);
+            } catch(Exception parseException) {
+                logger.debug("unable to parse date");
+            }
+
 
             Role role = new Role();
             role.setRole("user");

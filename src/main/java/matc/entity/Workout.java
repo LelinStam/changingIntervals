@@ -4,13 +4,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
+import java.util.Date;
 import java.util.Objects;
 
 /**
  * The type workout.
  */
 @Entity(name = "Workout")
-@Table(name = "personal_workouts")
+@Table(name = "my_workouts")
 public class Workout {
 
     @Id
@@ -21,14 +22,16 @@ public class Workout {
     private String workout;
 
     @Column(name = "date_created")
-    private int dateCreated;
+    private Date dateCreated;
 
     @Column(name = "date_modified")
-    private int dateModified;
+    private Date dateModified;
+
+    private int mileage;
 
     @ManyToOne
     @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "personal_workouts_user_id_fk")
+            foreignKey = @ForeignKey(name = "my_workouts_user_id_fk")
     )
     private User user;
 
@@ -46,9 +49,10 @@ public class Workout {
      * @param dateModified the date
      * @param user         the user
      */
-    public Workout(String workout, int dateCreated, int dateModified, User user ) {
+    public Workout(String workout, Date dateCreated, Date dateModified, int mileage, User user ) {
         this.dateCreated = dateCreated;
         this.dateModified = dateModified;
+        this.mileage = mileage;
         this.user = user;
         this.workout = workout;
     }
@@ -95,7 +99,7 @@ public class Workout {
      *
      * @return the date created
      */
-    public int getDateCreated() {
+    public Date getDateCreated() {
         return dateCreated;
     }
 
@@ -104,7 +108,7 @@ public class Workout {
      *
      * @param dateCreated the date created
      */
-    public void setDateCreated(int dateCreated) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -113,7 +117,7 @@ public class Workout {
      *
      * @return the date modified
      */
-    public int getDateModified() {
+    public Date getDateModified() {
         return dateModified;
     }
 
@@ -122,8 +126,26 @@ public class Workout {
      *
      * @param dateModified the date modified
      */
-    public void setDateModified(int dateModified) {
+    public void setDateModified(Date dateModified) {
         this.dateModified = dateModified;
+    }
+
+    /**
+     * Gets mileage.
+     *
+     * @return Value of mileage.
+     */
+    public int getMileage() {
+        return mileage;
+    }
+
+    /**
+     * Sets new mileage.
+     *
+     * @param mileage New value of mileage.
+     */
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
     }
 
     /**
@@ -151,6 +173,7 @@ public class Workout {
                 ", workout='" + workout + '\'' +
                 ", date created='" + dateCreated + '\'' +
                 ", date modified='" + dateModified + '\'' +
+                ", mileage='" + mileage + '\'' +
                 ", user=" + user +
                 '}';
     }
@@ -163,12 +186,13 @@ public class Workout {
         return id == workout1.id &&
                 dateCreated == workout1.dateCreated &&
                 dateModified == workout1.dateModified &&
+                mileage == workout1.mileage &&
                 Objects.equals(workout, workout1.workout) &&
                 Objects.equals(user, workout1.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, workout, dateCreated, dateModified, user);
+        return Objects.hash(id, workout, dateCreated, dateModified, mileage, user);
     }
 }

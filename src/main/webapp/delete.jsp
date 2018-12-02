@@ -16,14 +16,7 @@
 				<label>*ID:</label>
 				<input type="text" class="text form-control" name="id" required="required" />
 			</div>
-			<div class="form-group col-sm-6">
-				<label for="firstName">*First Name:</label>
-				<input type="text" class="text form-control" name="firstName" required="required" />
-			</div>
-			<div class="form-group col-sm-6">
-				<label for="lastName">*Last Name:</label>
-				<input type="text" class="text form-control" name="lastName" required="required" />
-			</div>
+
 			<div class="control-group">
 				<div class="controls">
 					<button type="submit" name="submit" value="delete" class="btn">Delete</button>

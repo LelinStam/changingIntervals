@@ -41,11 +41,11 @@
             <span class="icon-bar"></span>
         </a>
         <div class="navbar-inner">
-            <a class="brand" href="home-page.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
+            <a class="brand" href="my-workouts.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
 
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="signup.jsp">Sign Up</a></li>
-                    <a href="home-page.jsp" role="button" ><span class="btn btn-large btn-success">Login</span></a>
+                    <a href="my-workouts.jsp" role="button" ><span class="btn btn-large btn-success">Login</span></a>
 
                 </li>
             </ul>

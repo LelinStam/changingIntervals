@@ -40,8 +40,8 @@
             <span class="icon-bar"></span>
         </a>
         <div class="navbar-inner">
-            <a class="brand" href="home-page.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" method="post" action="home-page.jsp" >
+            <a class="brand" href="user.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
+            <form class="form-inline navbar-search" method="post" action="my-workouts.jsp" >
                 <input id="srchFld" class="srchTxt" type="text" />
                 <select class="srchTxt">
                     <option>All</option>
@@ -53,7 +53,6 @@
                 <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
             </form>
             <ul id="topMenu" class="nav pull-right">
-                <li class=""><a href="user.jsp">Delete User</a></li>
                 <li class=""><a href="user.jsp">Edit Users</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 

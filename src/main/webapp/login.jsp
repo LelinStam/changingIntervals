@@ -5,7 +5,7 @@
 
 	<div class="span12">
     <ul class="breadcrumb">
-		<li><a href="home-page.jsp">Home</a> <span class="divider">/</span></li>
+		<li><a href="my-workouts.jsp">Home</a> <span class="divider">/</span></li>
 		<li class="active">Log In</li>
     </ul>
 		<p class="message">${message}</p>

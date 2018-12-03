@@ -40,8 +40,8 @@
             <span class="icon-bar"></span>
         </a>
         <div class="navbar-inner">
-            <a class="brand" href="home-page.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" method="post" action="home-page.jsp" >
+            <a class="brand" href="my-workouts.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
+            <form class="form-inline navbar-search" method="post" action="my-workouts.jsp" >
                 <input id="srchFld" name="searchTerm" class="srchTxt" type="text" />
                 <select name="searchType" class="srchTxt">
                     <option>All</option>

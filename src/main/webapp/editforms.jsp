@@ -5,7 +5,7 @@
 
 	<div class="span12">
     <ul class="breadcrumb">
-		<li><a href="home-page-admin.jsp">Admin</a> <span class="divider">/</span></li>
+		<li><a href="user.jsp">Admin</a> <span class="divider">/</span></li>
 		<li class="active">Edit User</li>
     </ul>
 
@@ -27,11 +27,13 @@
 				<tr><td>Last Name:</td><td>
 					<input type="text" name="lastName" value="<%= user.getLastName()%>"/></td></tr>
 				<tr><td>Username:</td><td>
-					<input type="text" name="username" value="<%= user.getUserName()%>"/></td></tr>
+					<input type="text" name="userName" value="<%= user.getUserName()%>"/></td></tr>
 				<tr><td>Password:</td><td>
 					<input type="password" name="password" value="<%= user.getPassword()%>"/></td></tr>
+				<tr><td>Date of Birth:</td><td>
+					<input type="Date" name="dateOfBirth" value="<%= user.getDateOfBirth()%>"/></td></tr>
 				<tr><td>Role:</td><td>
-					<select  name="role" >
+					<select  name="role">
 					<option>admin</option>
 					<option>user</option>
 					</select>

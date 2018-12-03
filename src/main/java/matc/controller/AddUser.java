@@ -90,7 +90,7 @@ public class AddUser extends HttpServlet {
             session.setAttribute("message", message);
 
             // Redirect
-            response.sendRedirect("home-page.jsp");
+            response.sendRedirect("my-workouts.jsp");
         }
     }
 }

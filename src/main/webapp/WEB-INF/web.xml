@@ -17,10 +17,8 @@
 <security-constraint>
   <web-resource-collection>
     <web-resource-name>authentication</web-resource-name>
-    <url-pattern>/search.jsp</url-pattern>
-    <url-pattern>/results.jsp</url-pattern>
-    <url-pattern>/delete.jsp</url-pattern>
-    <url-pattern>/home-page-admin.jsp</url-pattern>
+    <url-pattern>/user.jsp</url-pattern>
+    <url-pattern>/editforms.jsp</url-pattern>
   </web-resource-collection>
   <auth-constraint>
     <role-name>admin</role-name>
@@ -32,7 +30,6 @@
       <web-resource-name>account</web-resource-name>
       <url-pattern>/my-workouts.jsp</url-pattern>
       <url-pattern>/workout-results.jsp</url-pattern>
-      <url-pattern>/home-page.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

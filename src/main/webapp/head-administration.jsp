@@ -53,9 +53,7 @@
                 <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
             </form>
             <ul id="topMenu" class="nav pull-right">
-                <li class=""><a href="delete.jsp">Delete A User</a></li>
-                <li class=""><a href="search.jsp">Find a User</a></li>
-                <li class=""><a href="edit.jsp">Edit a User</a></li>
+                <li class=""><a href="user.jsp">Edit Users</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 
                 </li>

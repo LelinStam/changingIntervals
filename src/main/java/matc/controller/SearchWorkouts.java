@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A simple servlet to welcome the user.
@@ -27,26 +28,29 @@ public class SearchWorkouts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Dao dao = new Dao(Workout.class);
+        Dao workoutDao = new Dao(Workout.class);
+        Dao userDao = new Dao(User.class);
+
         boolean isValid = true;
         String search = req.getParameter("submit");
         String searchTerm = req.getParameter("searchTerm");
+        String userId = req.getParameter("userId");
+
+        User user = (User)userDao.getById(userId);
 
         if(search.equals("search")) {
             if (!searchTerm.isEmpty() && searchTerm instanceof String) {
-            req.setAttribute("workouts", dao.getByPropertyLike("workout", searchTerm));
+
+                req.setAttribute("workouts", workoutDao.getByPropertyLike("workout", searchTerm));
 
             } else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
                 dispatcher.forward(req, resp);
             }
         } else {
-            HttpSession session = req.getSession(false);
-            String username = req.getRemoteUser();
-            Dao userDao = new Dao(User.class);
-            List<User> user = userDao.getByPropertyEqual("username", username);
-            User currentUser = user.get(0);
-            req.setAttribute("workouts", currentUser.getWorkouts());
+            //HttpSession session = req.getSession(false);
+            //String username = req.getRemoteUser();
+            req.setAttribute("workouts", user.getWorkouts());
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/workout-results.jsp");

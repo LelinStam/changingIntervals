@@ -8,7 +8,15 @@
 		<li><a href="home-page-admin.jsp">Admin</a> <span class="divider">/</span></li>
 		<li class="active">Delete User</li>
     </ul>
-	<h3> Delete a User</h3>
+		<%@page import="matc.persistence.Dao,matc.entity.User"%>
+		<jsp:useBean id="user" class="matc.entity.User"></jsp:useBean>
+		<jsp:setProperty property="*" name="user"/>
+		<%
+			Dao userDao = new Dao(User.class);
+			userDao.delete(user);
+			response.sendRedirect("user.jsp");
+		%>
+		<h3> Delete a User</h3>
 		<p class="message">${message}</p>
 		<c:remove var="message" />
 		<form style="margin:20px;" id="delete" class="row" action="deleteUser" method="post">

@@ -73,4 +73,4 @@ TIME LOG (not including class time)
 -week 11 complete-
 
 11/28:  5hr Ind project
-12/2:   8hr Ind project
+12/2:   8.5hr Ind project

@@ -41,8 +41,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						${user.getAge()}
 					</c:if>
 				</td>
-				<td><a href="delete.jsp?id=${user.id}">Delete</a> /
-					<a href="editforms.jsp?id=${user.id}">Edit</a></td>
+				<td><a href="delete.jsp?id=${user.getId()}">Delete</a> /
+					<a href="editforms.jsp?id=${user.getId()}">Edit</a></td>
 			</tr>
 		</c:forEach>
 		</tbody>

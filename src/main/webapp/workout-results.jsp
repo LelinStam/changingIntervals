@@ -15,6 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<th>Date Created</th>
 			<th>Date Modified</th>
 			<th>Workout</th>
+			<th>Mileage</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -23,6 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<td>${workout.dateCreated} </td>
 				<td>${workout.dateModified}</td>
 				<td>${workout.workout}</td>
+				<td>${workout.mileage}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

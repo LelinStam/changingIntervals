@@ -12,6 +12,12 @@
 		<p>View all of your saved workouts or search for a specific workout by key word</p>
 		<form action="searchWorkouts" >
 			<div class="control-group">
+				<div class="controls">
+					<label for="userId">ID:</label>
+					<input class="span3" type="text" name="userId" id="userId" />
+				</div>
+			</div>
+			<div class="control-group">
 			<div class="controls">
 				<input class="span3" type="text" name="searchTerm" id="searchTerm" />
 			</div>

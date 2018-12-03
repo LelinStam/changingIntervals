@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
+import static org.hibernate.query.criteria.internal.ValueHandlerFactory.isNumeric;
+
 /**
  * A simple servlet to welcome the user.
  * @author lclemens
@@ -30,13 +32,11 @@ public class SearchWorkouts extends HttpServlet {
 
         Dao workoutDao = new Dao(Workout.class);
         Dao userDao = new Dao(User.class);
-
+        String message = "";
         boolean isValid = true;
         String search = req.getParameter("submit");
         String searchTerm = req.getParameter("searchTerm");
         String userId = req.getParameter("userId");
-
-        User user = (User)userDao.getById(userId);
 
         if(search.equals("search")) {
             if (!searchTerm.isEmpty() && searchTerm instanceof String) {
@@ -50,7 +50,21 @@ public class SearchWorkouts extends HttpServlet {
         } else {
             //HttpSession session = req.getSession(false);
             //String username = req.getRemoteUser();
-            req.setAttribute("workouts", user.getWorkouts());
+            if(userId.isEmpty() || !isNumeric(userId)) {
+                message = "User ID is empty or non-numeric";
+                req.setAttribute("message", message);
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
+                dispatcher.forward(req, resp);
+            } else if(userDao.getById(userId)==null) {
+                message = "User for Id: " + userId + " does not exist";
+                req.setAttribute("message", message);
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
+                dispatcher.forward(req, resp);
+            } else {
+                User user = (User)userDao.getById(userId);
+                req.setAttribute("workouts", user.getWorkouts());
+            }
+
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/workout-results.jsp");

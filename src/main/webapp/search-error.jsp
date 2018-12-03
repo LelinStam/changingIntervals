@@ -8,6 +8,7 @@
 <%@include file="head-registereduser.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <h1>Error</h1>
-
-    <p> Sorry, your search terms for your workout were invalid. Please enter a digit <a href="my-workouts.jsp">here</a></p>
+<p class="message">${message}</p>
+<c:remove var="message" />
+<p> Sorry, your search terms for your workout were invalid. Please enter a digit <a href="my-workouts.jsp">here</a></p>
 <%@include file="footer.jsp"%>

@@ -29,5 +29,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</c:forEach>
 		</tbody>
 	</table>
-
+<p>Click View All to see all workouts</p>
+<button type="submit" name="submit" value="viewAll" class="btn">View All</button>
 <%@include file="footer.jsp"%>

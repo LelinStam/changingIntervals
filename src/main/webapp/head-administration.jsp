@@ -41,14 +41,12 @@
         </a>
         <div class="navbar-inner">
             <a class="brand" href="user.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" method="post" action="my-workouts.jsp" >
-                <input id="srchFld" class="srchTxt" type="text" />
-                <select class="srchTxt">
-                    <option>All</option>
-                    <option>Sprint Workouts </option>
-                    <option>Group Workouts </option>
-                    <option>Distance Workouts </option>
-                    <option>Open Water Workouts </option>
+            <form class="form-inline navbar-search" action="/searchWorkouts" >
+                <input id="searchTerm" name="searchTerm" class="srchTxt" type="text" />
+                <select name="searchType" class="srchTxt">
+                    <option>Date Created </option>
+                    <option>Date Modified </option>
+                    <option>Workout </option>
                 </select>
                 <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
             </form>

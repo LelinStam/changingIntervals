@@ -41,10 +41,9 @@
         </a>
         <div class="navbar-inner">
             <a class="brand" href="my-workouts.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" method="post" action="my-workouts.jsp" >
-                <input id="srchFld" name="searchTerm" class="srchTxt" type="text" />
+            <form class="form-inline navbar-search" action="/searchWorkouts" >
+                <input id="searchTerm" name="searchTerm" class="srchTxt" type="text" />
                 <select name="searchType" class="srchTxt">
-                    <option>All</option>
                     <option>Date Created </option>
                     <option>Date Modified </option>
                     <option>Workout </option>
@@ -54,6 +53,7 @@
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="my-workouts.jsp">My Workouts</a></li>
                 <li class=""><a href="new-workout.jsp">Create a Workout</a></li>
+                <li class=""><a href="progress.jsp">Create a Workout</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 
                 </li>

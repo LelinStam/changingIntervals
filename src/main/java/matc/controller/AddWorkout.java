@@ -33,17 +33,16 @@ public class AddWorkout extends HttpServlet {
         // Get Form Parameters
         String enteredWorkout = request.getParameter("workout");
         String mileage = request.getParameter("mileage");
-        String userId = request.getParameter("userId");
+        String username = request.getUserPrincipal().getName();
 
         // Create Daos
         Dao userDao = new Dao(User.class);
         Dao workoutDao = new Dao(Workout.class);
 
         // find user by session
-        //HttpSession session = request.getSession(false);
-        //String username = request.getRemoteUser();
-        //request.setAttribute("username", username);
-        User user = (User)userDao.getById(userId);
+        List<User> users = userDao.getByPropertyEqual("userName", username);
+        User user = users.get(0);
+        request.setAttribute("workouts", user.getWorkouts());
 
         // Create objects and add to the database
         Workout workout = new Workout();

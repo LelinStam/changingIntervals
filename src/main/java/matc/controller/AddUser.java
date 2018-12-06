@@ -40,6 +40,7 @@ public class AddUser extends HttpServlet {
         // Create Daos
         Dao userDao = new Dao(User.class);
         Dao roleDao = new Dao(Role.class);
+
         // Validate form
         String message;
         List<User> usernameCheck = userDao.getByPropertyLike("userName", username);
@@ -50,18 +51,21 @@ public class AddUser extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
+
         } else if (!password.equals(confirmPassword)) {
             // Check that password fields match
             message = "*The passwords you have entered do not match";
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
+
         } else if (password.length() < 6 || confirmPassword.length() < 6) {
             // Check that password is at least 6 characters
             message = "*Your password must contain at least 6 characters";
             HttpSession session = request.getSession();
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
+
         } else {
             // Create objects and add to the database
             User user = new User();
@@ -70,6 +74,7 @@ public class AddUser extends HttpServlet {
             user.setPassword(password);
             user.setUserName(username);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
             try {
                 Date parsed = format.parse(dateOfBirth);
                 user.setDateOfBirth(parsed);

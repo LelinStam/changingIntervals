@@ -30,44 +30,48 @@ public class SearchWorkouts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        String search = req.getParameter("submit");
+        String searchTerm = req.getParameter("searchTerm");
+        String searchType = req.getParameter("searchType");
+        String username = req.getUserPrincipal().getName();
+
         Dao workoutDao = new Dao(Workout.class);
         Dao userDao = new Dao(User.class);
         String message = "";
         boolean isValid = true;
-        String search = req.getParameter("submit");
-        String searchTerm = req.getParameter("searchTerm");
-        String userId = req.getParameter("userId");
 
-        if(search.equals("search")) {
-            if (!searchTerm.isEmpty() && searchTerm instanceof String) {
+        if (search.equals("search")) {
+            if (!searchTerm.isEmpty() && searchTerm instanceof String){
 
-                req.setAttribute("workouts", workoutDao.getByPropertyLike("workout", searchTerm));
+                List<User> users = userDao.getByPropertyEqual("userName", username);
+                User user = users.get(0);
+                List<Workout> workouts = workoutDao.getByPropertyLike(searchType, searchTerm);
+
+                List<Workout> searchedWorkouts = findUsersWorkouts(user, workouts);
+                req.setAttribute("workouts", searchedWorkouts);
 
             } else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
                 dispatcher.forward(req, resp);
             }
         } else {
-            //HttpSession session = req.getSession(false);
-            //String username = req.getRemoteUser();
-            if(userId.isEmpty() || !isNumeric(userId)) {
-                message = "User ID is empty or non-numeric";
-                req.setAttribute("message", message);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
-                dispatcher.forward(req, resp);
-            } else if(userDao.getById(userId)==null) {
-                message = "User for Id: " + userId + " does not exist";
-                req.setAttribute("message", message);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/search-error.jsp");
-                dispatcher.forward(req, resp);
-            } else {
-                User user = (User)userDao.getById(userId);
-                req.setAttribute("workouts", user.getWorkouts());
-            }
-
+            List<User> users = userDao.getByPropertyEqual("userName", username);
+            User user = users.get(0);
+            req.setAttribute("workouts", user.getWorkouts());
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/workout-results.jsp");
         dispatcher.forward(req, resp);
     }
+
+    public List<Workout> findUsersWorkouts(User user, List<Workout> workouts) {
+       List<Workout> searchedWorkouts = null;
+       for(Workout workout : workouts) {
+           if(user == workout.getUser()) {
+               searchedWorkouts.add(workout);
+           }
+       }
+        return searchedWorkouts;
+    }
+
 }

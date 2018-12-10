@@ -17,6 +17,11 @@
     <link href="themes/css/font-awesome.css" rel="stylesheet" type="text/css">
     <!-- Google-code-prettify -->
     <link href="themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+    <!-- jQuery slim -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="   crossorigin="anonymous"></script>
+    <!-- The next two items are to support jQuery datatables. Learn more about datatables here:https://datatables.net -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
     <!-- fav and touch icons -->
     <link rel="shortcut icon" href="themes/images/products/pal.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="themes/images/ico/apple-touch-icon-144-precomposed.png">
@@ -44,9 +49,9 @@
             <form class="form-inline navbar-search" action="/searchWorkouts" >
                 <input id="searchTerm" name="searchTerm" class="srchTxt" type="text" />
                 <select name="searchType" class="srchTxt">
+                    <option>Workout </option>
                     <option>Date Created </option>
                     <option>Date Modified </option>
-                    <option>Workout </option>
                 </select>
                 <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
             </form>

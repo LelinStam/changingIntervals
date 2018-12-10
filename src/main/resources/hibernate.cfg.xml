@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/sample</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/swim</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
         <property name="connection.username">root</property>
@@ -19,6 +19,8 @@
         <mapping class="matc.entity.User"/>
         <mapping class="matc.entity.Role"/>
         <mapping class="matc.entity.Workout"/>
+        <mapping class="matc.entity.Location"/>
+
 
     </session-factory>
 

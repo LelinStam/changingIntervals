@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * A simple servlet to get a graph of mileage over time.
@@ -27,22 +27,62 @@ public class GetGraph extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Dao workoutDao = new Dao(Workout.class);
-        String mileages= "";
+        Dao userDao = new Dao(User.class);
+
+        String username = req.getUserPrincipal().getName();
+        String mileages = "";
         int mileage= 0;
 
-        List<Workout> workouts = workoutDao.getAll();
-        for (int counter = 0; counter < workouts.size(); counter++) {
-            if (counter == (workouts.size()-1)) {
-                mileages += Integer.toString(workouts.get(counter).getMileage());
-            } else {
-                mileages += Integer.toString(workouts.get(counter).getMileage()) + ",";
-            }
+        String months = req.getParameter("months");
+        Calendar date = Calendar.getInstance();
+        if(months=="3") {
+            date.set(Calendar.MONTH, Calendar.OCTOBER);
+        } else if(months=="6") {
+            date.set(Calendar.MONTH, Calendar.JULY);
+        }
 
+        List<User> users = userDao.getByPropertyEqual("userName", username);
+        User user = users.get(0);
+        Set<Workout> workouts = user.getWorkouts();
+        List<Workout> workoutsList= convertToList(workouts);
+
+        for (int counter = 0; counter < workoutsList.size(); counter++) {
+            Date dateOfCurrentWorkout = workoutsList.get(counter).getDateCreated();
+            if(dateOfCurrentWorkout.after(date.getTime())) {
+                if(mileages.isEmpty()) {
+                    mileages += (Integer.toString(workoutsList.get(counter).getMileage()));
+                } else {
+                    mileages += ("," + Integer.toString(workoutsList.get(counter).getMileage()));
+                }
+            }
         }
         req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages
-                + "&chds=1,10&chxt=x,y&chxl=0:|Apr|May|June|1:|1|2|3|4|5|6|7|8|9|10+miles' title='graph' alt='Error generating chart...' />" );
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/my-workouts.jsp");
+                + "&chds=0,10&chxt=x,y&chxl=0:" + getDate(months) + "|1:|1|2|3|4|5|6|7|8|9|10+miles' title='graph' alt='Error generating chart...' />" );
+        req.setAttribute("mileages",mileages);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/progress.jsp");
         dispatcher.forward(req, resp);
+    }
+
+    //public void getDates() {}
+
+    public List<Workout> convertToList(Set<Workout> workouts) {
+        List<Workout> mainList = new ArrayList<Workout>();
+        mainList.addAll(workouts);
+
+        return mainList;
+    }
+
+    public String getDate(String months){
+
+        String monthNames = "";
+        int numberMonths = Integer.parseInt(months);
+
+        if(numberMonths==3) {
+             monthNames = "|Oct|Nov|Dec";
+        } else if(numberMonths ==6){
+            monthNames = "|July|Aug|Sept|Oct|Nov|Dec";
+        }
+
+        return monthNames;
     }
 }

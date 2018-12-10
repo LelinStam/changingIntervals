@@ -13,7 +13,7 @@
   <form-error-page>/login-error.jsp</form-error-page>
 </form-login-config>
 </login-config>
-        <!-- Protect everything within the "investing" directory. -->
+        <!-- Protect everything within the "investing" directory.-->
 <security-constraint>
   <web-resource-collection>
     <web-resource-name>authentication</web-resource-name>

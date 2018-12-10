@@ -77,4 +77,5 @@ TIME LOG (not including class time)
 12/5:   2.5hr exercise
 -week 13 complete-
 
-12/5:   5pm
+12/5:   1.75hr Ind project
+12/8:   5hr Ind Project

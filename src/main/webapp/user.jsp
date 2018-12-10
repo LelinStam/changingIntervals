@@ -7,6 +7,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <%@include file="head-administration.jsp"%>
 <%@page import="matc.entity.User, matc.persistence.Dao"%>
 <%@ page import="java.util.List" %>
+
+
+<script type="text/javascript" class="init">
+
+    $(document).ready(function() {
+        $('#userTable').DataTable();
+    });
+</script>
 <%
 	Dao userDao = new Dao(User.class);
 	List<User> list = userDao.getAll();
@@ -15,17 +23,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <div class="page-header">
 		<h3>All Users </h3>
+	<p class="message">${message}</p>
+	<c:remove var="message" />
 	</div>
-	<table style="margin:20px;" class="table table-bordered table-striped">
+	<table id="userTable" style="margin:20px;" class="table table-bordered table-striped">
 		<thead>
-		<tr>
 			<th>ID</th>
 			<th>Name</th>
 			<th>UserName</th>
 			<th>Password</th>
 			<th>Age</th>
-			<th>Delete/ Edit</th>
-		</tr>
+			<th>Edit</th>
 		</thead>
 		<tbody>
 		<c:forEach var="user" items="${list}">
@@ -41,8 +49,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						${user.getAge()}
 					</c:if>
 				</td>
-				<td><a href="delete.jsp?id=${user.getId()}">Delete</a> /
-					<a href="editforms.jsp?id=${user.getId()}">Edit</a></td>
+				<td>
+					<a href="delete.jsp?id=${user.getId()}">Delete</a> /
+					<a href="editforms.jsp?id=${user.getId()}">Edit</a>
+				</td>
 			</tr>
 		</c:forEach>
 		</tbody>

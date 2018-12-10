@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -44,7 +45,7 @@ class DaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"), "password");
+        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
@@ -56,12 +57,13 @@ class DaoTest {
      */
     @Test
     void insertWithWorkoutSuccess() {
-        User newUser = new User("Fred", "Flintstone", "fflintstone", LocalDate.parse("1968-01-01"), "password");
+        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
 
         String workout = "2x500 warmup, 2x400 free on 2:20, 300 cooldown";
-        int dateCreated = 11062016;
-        int dateModified = 112018;
-        Workout newWorkout = new Workout(workout, dateCreated, dateModified, newUser);
+        Date dateCreated = new Date("2016-11-06");
+        Date dateModified = new Date("2018-01-01");
+        int mileage = 3;
+        Workout newWorkout = new Workout(workout, dateCreated, dateModified, mileage, newUser);
 
         newUser.addWorkout(newWorkout);
 

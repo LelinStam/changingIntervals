@@ -42,6 +42,12 @@ public class User {
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
 
+    @OneToOne
+    @JoinColumn(name = "locations_id",
+            foreignKey = @ForeignKey(name = "user_locations")
+    )
+    private Location location;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Workout> workouts = new HashSet<>();
 
@@ -176,6 +182,24 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * Gets location.
+     *
+     * @return the location
+     */
+    public Location getLocation() {
+        return location;
+    }
+
+    /**
+     * Sets location.
+     *
+     * @param location the location
+     */
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     /**

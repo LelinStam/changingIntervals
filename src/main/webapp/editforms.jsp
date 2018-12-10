@@ -19,25 +19,20 @@
 			%>
 
 		<h1>Edit Form</h1>
-		<form action="edit.jsp" method="post">
+		<form action="editUser" method="post">
 			<input type="hidden" name="id" value="<%=user.getId() %>"/>
 			<table>
 				<tr><td>First Name:</td><td>
-					<input type="text" name="firstName" value="<%= user.getFirstName()%>"/></td></tr>
+					<input type="text" name="firstName" value="<%= user.getFirstName()%>" /></td></tr>
 				<tr><td>Last Name:</td><td>
-					<input type="text" name="lastName" value="<%= user.getLastName()%>"/></td></tr>
+					<input type="text" name="lastName" value="<%= user.getLastName()%>" /></td></tr>
 				<tr><td>Username:</td><td>
-					<input type="text" name="userName" value="<%= user.getUserName()%>"/></td></tr>
+					<input type="text" name="userName" value="<%= user.getUserName()%>" required="required"/></td></tr>
 				<tr><td>Password:</td><td>
-					<input type="password" name="password" value="<%= user.getPassword()%>"/></td></tr>
+					<input type="password" name="password" value="<%= user.getPassword()%>" required="required"/></td></tr>
 				<tr><td>Date of Birth:</td><td>
-					<input type="Date" name="dateOfBirth" value="<%= user.getDateOfBirth()%>"/></td></tr>
-				<tr><td>Role:</td><td>
-					<select  name="role">
-					<option>admin</option>
-					<option>user</option>
-					</select>
-				</td></tr>
+					<input type="Date" name="dateOfBirth" value="<%= user.getDateOfBirth().toString()%>"/></td></tr>
+
 				<tr><td colspan="2"><input type="submit" value="Save"/></td></tr>
 			</table>
 		</form>

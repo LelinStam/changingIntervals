@@ -150,6 +150,7 @@ public class Dao<T> {
         return entity;
     }
 
+
     /**
      * Returns an open session from the SessionFactory
      * @return session

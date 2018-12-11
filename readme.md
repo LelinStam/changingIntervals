@@ -7,11 +7,18 @@ Training individually can be very difficult and de-motivating. The Swim Training
 ### Technologies and Platforms
 
 *Tomcat's JDBC Realm Authorization
+
 *CRUD
+
 *mySQL & Hibernate
+
 *Custom CSS & html
+
 *Maven
+
 *IDE
+
 *intelij IDEA
+
 *Log4j
 

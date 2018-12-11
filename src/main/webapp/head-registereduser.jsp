@@ -46,25 +46,26 @@
         </a>
         <div class="navbar-inner">
             <a class="brand" href="my-workouts.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" action="searchWorkouts" >
-                <input id="searchTerm" name="searchTerm" class="srchTxt" type="text" />
+            <form class="form-inline navbar-search" action="sendToPage" >
                 <select name="searchType" class="srchTxt">
                     <option value="workout">Workout </option>
+                    <option value="address">Address </option>
+                    <option value="blog">Blog </option>
                 </select>
                 <button type="submit" name="submit" value="search" id="submitButton" class="btn btn-primary">Go</button>
             </form>
             <ul id="topMenu" class="nav pull-right">
-                <li class=""><a href="search.jsp">Find a Swim Friend</a></li>
-                <li class=""><a href="results.jsp">View Swim Friends</a></li>
+                <li class=""><a href="results.jsp">Find Swim Friends</a></li>
+                <li class=""><a href="blog-posts.jsp">Blog Posts</a></li>
                 <li class=""><a href="my-workouts.jsp">My Workouts</a></li>
-                <li class=""><a href="new-workout.jsp">Create a Workout</a></li>
+                <li class=""><a href="new-workout.jsp">New Workout</a></li>
+                <li class=""><a href="all-workouts.jsp">All Workouts</a></li>
                 <li class=""><a href="progress.jsp">Progress</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 
-                </li>
+
             </ul>
         </div>
     </div>
-</div>
 </div>
 <!-- Header End====================================================================== -->

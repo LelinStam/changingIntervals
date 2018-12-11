@@ -30,7 +30,7 @@
 <div id="header">
     <div class="container">
         <div id="welcomeLine" class="row">
-            <div class="span6">Welcome!</div>
+            <div class="span6"><h5>A Swimmer Community Site for collaborative training, tracking, and sharing </h5></div>
         </div>
     </div>
     <!-- Navbar ================================================== -->
@@ -41,16 +41,15 @@
             <span class="icon-bar"></span>
         </a>
         <div class="navbar-inner">
-            <a class="brand" href="my-workouts.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
+            <a class="brand" href="index.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
 
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="signup.jsp">Sign Up</a></li>
                     <a href="my-workouts.jsp" role="button" ><span class="btn btn-large btn-success">Login</span></a>
 
-                </li>
+
             </ul>
         </div>
     </div>
-</div>
 </div>
 <!-- Header End====================================================================== -->

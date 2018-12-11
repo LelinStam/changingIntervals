@@ -59,8 +59,7 @@
                 <li class=""><a href="user.jsp">Edit Users</a></li>
                     <a href="logout.jsp" role="button" ><span class="btn btn-large btn-success">Logout</span></a>
 
-                </li>
-            </ul>
+                </ul>
         </div>
     </div>
 </div>

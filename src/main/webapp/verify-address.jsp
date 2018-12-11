@@ -1,4 +1,8 @@
 <%@include file="head-registereduser.jsp"%>
+<%@ page import="com.smartystreets.api.us_street.Candidate" %>
+<%
+	Candidate address = (Candidate)request.getAttribute("address");
+%>
 
 <div id="mainBody">
 	<div class="container">
@@ -12,19 +16,20 @@
 		<h3> New Address </h3>
 		<p class="message">${message}</p>
 		<c:remove var="message" />
-		<p>Please fill out the form to create your new address</p>
-		<form action="verifyAddress" method="post">
+		<form action="addAddress" method="post">
 			<div class="form-group col-sm-12">
 				<label for="streetAddress">*Street Address:</label>
-				<input type="text" class="text form-control" id="streetAddress" name="streetAddress" required="required" />
+				<input type="text" class="text form-control" id="streetAddress" name="streetAddress"
+					   value="<%=address.getComponents().getStreetPostdirection()%>" required="required" />
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="city">*City:</label>
-				<input type="text" class="text form-control" id="city" name="city" required="required" />
+				<input type="text" class="text form-control" id="city" name="city"
+					   value="<%=address.getComponents().getCityName()%>" required="required" />
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="state">*State:</label>
-				<select name="state" id="state" class="select">
+				<select name="state" id="state" value="<%=address.getComponents().getState()%>" class="select">
 					<option value="none">Select State</option>
 					<option value="Alabama">Alabama</option>
 					<option value="Alaska">Alaska</option>
@@ -80,7 +85,8 @@
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="zip">*Zip Code:</label>
-				<input type="text" class="text form-control" id="zip" name="zip" required="required" />
+				<input type="text" class="text form-control" id="zip" name="zip"
+					   value="<%=address.getComponents().getZipCode()%>" required="required" />
 			</div>
 			<div class="control-group">
 				<div class="controls">

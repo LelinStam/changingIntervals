@@ -1,4 +1,7 @@
 ﻿<%@include file="head.jsp"%>
+
+
+
 <div id="carouselBlk">
 	<div id="myCarousel" class="carousel slide">
 		<div class="carousel-inner">
@@ -25,4 +28,4 @@
 		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 	  </div>
 </div>
-<%@include file="footer.jsp"%>
+<%@include file="footer-index.jsp"%>

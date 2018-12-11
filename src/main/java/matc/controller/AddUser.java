@@ -1,8 +1,10 @@
 package matc.controller;
 
-import matc.entity.*;
+import matc.entity.Role;
+import matc.entity.User;
 import matc.persistence.Dao;
-import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -73,6 +74,7 @@ public class AddUser extends HttpServlet {
             user.setLastName(lastName);
             user.setPassword(password);
             user.setUserName(username);
+            user.setEmail(email);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
             try {

@@ -30,7 +30,7 @@
 					<input type="text" name="workout" value="<%= workout.getWorkout()%>" required="required"/></td></tr>
 				<tr><td>Mileage:</td><td>
 					<input type="number" name="mileage" value="<%= workout.getMileage()%>"/></td></tr>
-				</td></tr>
+
 				<tr><td colspan="2"><input type="submit" value="Save"/></td></tr>
 			</table>
 		</form>

@@ -79,3 +79,8 @@ TIME LOG (not including class time)
 
 12/5:   1.75hr Ind project
 12/8:   5hr Ind Project
+
+12/10:  .5hr Ind project
+12/11:  1.5 hr code review & prof. development feedback
+        2hr Ind Project
+        2pm

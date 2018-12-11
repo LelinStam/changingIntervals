@@ -9,7 +9,6 @@
 		<li class="active">Progress</li>
     </ul>
 		<h3> Total Mileage </h3>
-		<p>To view your mileage over time,
 		<form action="getGraph" method="get" >
 		<div class="control-group">
 			<label class="control-label" for="months">Please Enter number of recent months to view</label>
@@ -25,7 +24,7 @@
 			</div>
 		</div>
 	</form>
-		</p>
+
 
 		${image}
 		${mileages}

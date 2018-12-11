@@ -25,12 +25,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 %>
 
 	<div class="page-header">
-		<h3>My Workouts </h3>
+		<h3>All Swimmers </h3>
 	</div>
 	<table id="addressTable" style="margin:20px;" class="table table-bordered table-striped">
 		<thead>
 		<tr>
 			<th>Name</th>
+			<th>Email</th>
 			<th>Street Address</th>
 			<th>City</th>
 			<th>State & Zip</th>
@@ -40,6 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<c:forEach var="address" items="${addresses}">
 			<tr>
 				<td>${address.user.userName} </td>
+				<td>${address.user.email}</td>
 				<td>${address.streetAddress}</td>
 				<td>${address.city}</td>
 				<td>${address.state} ${address.zip}</td>

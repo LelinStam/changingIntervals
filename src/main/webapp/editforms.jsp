@@ -1,4 +1,12 @@
 <%@include file="head-administration.jsp"%>
+<%@page import="matc.persistence.Dao,matc.entity.User"%>
+
+<%
+	Dao userDao = new Dao(User.class);
+	String id=request.getParameter("id");
+	User user = (User)userDao.getById(id);
+%>
+
 <div id="mainBody">
 	<div class="container">
 	<div class="row">
@@ -8,15 +16,6 @@
 		<li><a href="user.jsp">Admin</a> <span class="divider">/</span></li>
 		<li class="active">Edit User</li>
     </ul>
-
-
-		<%@page import="matc.persistence.Dao,matc.entity.User"%>
-
-			<%
-			Dao userDao = new Dao(User.class);
-			String id=request.getParameter("id");
-			User user = (User)userDao.getById(id);
-			%>
 
 		<h1>Edit Form</h1>
 		<form action="editUser" method="post">

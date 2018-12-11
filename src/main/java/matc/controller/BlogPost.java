@@ -1,6 +1,6 @@
 package matc.controller;
 
-import matc.entity.Location;
+import matc.entity.Blog;
 import matc.entity.User;
 import matc.persistence.Dao;
 import org.apache.logging.log4j.LogManager;
@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,48 +22,46 @@ import java.util.List;
  * @author lclemens
  */
 @WebServlet(
-        urlPatterns = {"/addAddress"}
+        urlPatterns = {"/postBlog"}
 )
 
-public class AddAddress extends HttpServlet {
+public class BlogPost extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
 
         // Get Form Parameters
-        String streetAddress = request.getParameter("streetAddress");
-        String city = request.getParameter("city");
-        String state = request.getParameter("state");
-        String zip = request.getParameter("zip");
+        String title = request.getParameter("title");
+        String blog = request.getParameter("blog");
         String username = request.getUserPrincipal().getName();
 
         // Create Daos
         Dao userDao = new Dao(User.class);
-        Dao locationDao = new Dao(Location.class);
+        Dao blogDao = new Dao(Blog.class);
 
         // find user by session
         List<User> users = userDao.getByPropertyEqual("userName", username);
         User user = users.get(0);
+        request.setAttribute("workouts", user.getWorkouts());
 
         // Create objects and add to the database
-        Location location = new Location();
-        location.setStreetAddress(streetAddress);
-        location.setCity(city);
-        location.setState(state);
-        location.setZip(zip);
-        location.setUser(user);
+        Blog blogToAdd = new Blog();
+        blogToAdd.setTitle(title);
+        blogToAdd.setBlog(blog);
+        blogToAdd.setDateCreated(convertToDateViaSqlDate(LocalDate.now()));
+        blogToAdd.setUser(user);
+        blogDao.insert(blogToAdd);
 
-        locationDao.insert(location);
-
-        user.setLocation(location);
-
-        String message = "*You have successfully entered a new address. Click <a href=results.jsp>here</a> to go home";
+        String message = "Thanks for submitting your blog post!";
         HttpSession newSession = request.getSession();
         newSession.setAttribute("message", message);
 
         // Redirect
-        response.sendRedirect("address.jsp");
+        response.sendRedirect("blog-posts.jsp");
 
     }
 
+    public Date convertToDateViaSqlDate(LocalDate dateToConvert) {
+        return java.sql.Date.valueOf(dateToConvert);
+    }
 }

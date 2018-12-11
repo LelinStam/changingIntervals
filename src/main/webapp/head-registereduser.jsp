@@ -56,6 +56,7 @@
             </form>
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="results.jsp">Find Swim Friends</a></li>
+                <li class=""><a href="address.jsp">Add Address</a></li>
                 <li class=""><a href="blog-posts.jsp">Blog Posts</a></li>
                 <li class=""><a href="my-workouts.jsp">My Workouts</a></li>
                 <li class=""><a href="new-workout.jsp">New Workout</a></li>

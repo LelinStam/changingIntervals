@@ -38,6 +38,15 @@ CREATE TABLE locations (
   PRIMARY KEY (`id`)
   );
 
+create table blog(
+id int(11) not null auto_increment,
+title varchar(50) not null,
+blog varchar(1500) not null,
+date_created Date,
+user_id int(11),
+primary key(id)
+);
+
 alter table role
 add constraint role_user_name_fkey
 foreign key (user_name)
@@ -49,5 +58,12 @@ alter table user
 add constraint user_locations_fkey
 foreign key (locations_id)
 references locations (id)
+on delete cascade
+on update cascade;
+
+alter table blog
+add constraint blog_user_id_fkey
+foreign key (user_id)
+references user (id)
 on delete cascade
 on update cascade;

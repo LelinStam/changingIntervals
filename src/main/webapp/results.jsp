@@ -18,9 +18,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 
 <%
-	Dao locationDao = new Dao(Location.class);
-	List<Location> list = locationDao.getAll();
-	request.setAttribute("addresses", list);
+	Dao userDao = new Dao(User.class);
+	List<User> list = userDao.getAll();
+	request.setAttribute("users", list);
 
 %>
 
@@ -38,13 +38,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach var="address" items="${addresses}">
+		<c:forEach var="user" items="${users}">
 			<tr>
-				<td>${address.user.userName} </td>
-				<td>${address.user.email}</td>
-				<td>${address.streetAddress}</td>
-				<td>${address.city}</td>
-				<td>${address.state} ${address.zip}</td>
+				<td>${user.userName} </td>
+				<td>${user.email}</td>
+				<td>${user.location.streetAddress}</td>
+				<td>${user.location.city}</td>
+				<td>${user.location.state} ${user.location.zip}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

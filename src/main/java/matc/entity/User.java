@@ -46,7 +46,7 @@ public class User {
 
     @OneToOne
     @JoinColumn(name = "locations_id",
-            foreignKey = @ForeignKey(name = "user_locations")
+            foreignKey = @ForeignKey(name = "user_Locations")
     )
     private Location location;
 
@@ -54,7 +54,11 @@ public class User {
     private Set<Workout> workouts = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Blog> blogs = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
+
     /**
      * Instantiates a new User.
      */
@@ -64,10 +68,11 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param firstName the first name
-     * @param lastName  the last name
-     * @param userName  the user name
-     * @param dateOfBirth  the date of birth
+     * @param firstName   the first name
+     * @param lastName    the last name
+     * @param userName    the user name
+     * @param dateOfBirth the date of birth
+     * @param password    the password
      */
     public User(String firstName, String lastName, String userName,  Date dateOfBirth, String password) {
         this.firstName = firstName;
@@ -187,22 +192,6 @@ public class User {
     }
 
     @Override
-    public String toString() {
-        return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", id=" + id +
-                ", dateOfBirth=" + dateOfBirth +
-                ", location=" + location +
-                ", workouts=" + workouts +
-                ", roles=" + roles +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -219,6 +208,19 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, userName, email, password, id, dateOfBirth);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                '}';
     }
 
     /**
@@ -313,6 +315,11 @@ public class User {
     }
 
 
+    /**
+     * Gets age.
+     *
+     * @return the age
+     */
     public int getAge() {
         int age;
         if(dateOfBirth != null) {
@@ -323,16 +330,32 @@ public class User {
         return age;
     }
 
+    /**
+     * Add workout.
+     *
+     * @param workout the workout
+     */
     public void addWorkout(Workout workout) {
         workouts.add(workout);
         workout.setUser(this);
     }
 
+    /**
+     * Remove workout.
+     *
+     * @param workout the workout
+     */
     public void removeWorkout(Workout workout) {
         workouts.remove(workout);
         workout.setUser(null);
     }
 
+    /**
+     * Convert to local date via milisecond local date.
+     *
+     * @param dateToConvert the date to convert
+     * @return the local date
+     */
     public LocalDate convertToLocalDateViaMilisecond(Date dateToConvert) {
         return Instant.ofEpochMilli(dateToConvert.getTime())
                 .atZone(ZoneId.systemDefault())
@@ -340,4 +363,24 @@ public class User {
     }
 
 
+    /**
+     * Sets new blogs.
+     *
+     * @param blog New value of blogs.
+     */
+    public void addBlog(Blog blog) {
+        blogs.add(blog);
+        blog.setUser(this);
+    }
+
+    /**
+     * Gets blogs.
+     *
+     * @param blog the blog
+     * @return Value of blog.
+     */
+    public void removeBlog(Blog blog) {
+        blogs.remove(blog);
+        blog.setUser(null);
+    }
 }

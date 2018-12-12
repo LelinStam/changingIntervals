@@ -1,16 +1,16 @@
 package matc.persistence;
 
-import matc.entity.*;
+import matc.entity.User;
+import matc.entity.Workout;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DaoTest {
+class UserDaoTest {
 
     Dao dao;
 

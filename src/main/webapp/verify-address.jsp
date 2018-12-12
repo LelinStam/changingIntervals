@@ -20,12 +20,13 @@
 			<div class="form-group col-sm-12">
 				<label for="streetAddress">*Street Address:</label>
 				<input type="text" class="text form-control" id="streetAddress" name="streetAddress"
-					   value="<%=address.getComponents().getStreetPostdirection()%>" required="required" />
+					   value="<%=address.getComponents().getPrimaryNumber() + ' ' + address.getComponents().getStreetName()
+					   + ' ' +address.getComponents().getStreetSuffix() %>" required="required" />
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="city">*City:</label>
 				<input type="text" class="text form-control" id="city" name="city"
-					   value="<%=address.getComponents().getCityName()%>" required="required" />
+					   value="<%=address.getComponents().getCityName() %>" required="required" />
 			</div>
 			<div class="form-group col-sm-4">
 				<label for="state">*State:</label>

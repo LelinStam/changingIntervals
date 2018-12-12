@@ -1,4 +1,8 @@
 <%@include file="head-registereduser.jsp"%>
+<%@ page import="com.smartystreets.api.us_street.Candidate" %>
+<%
+	Candidate address = (Candidate)request.getAttribute("address");
+%>
 
 <div id="mainBody">
 	<div class="container">
@@ -88,6 +92,11 @@
 				</div>
 			</div>
         </form>
+
+		<div id="myTab" class="pull-right">
+			<C:choose if address= <%=address.getComponents().getPrimaryNumber() + " " + address.getComponents().getStreetName()
+				+ ' ' +address.getComponents().getStreetSuffix() + " " + address.getComponents().getCityName()
+				+ ' ' + address.getComponents().getState() + " " + address.getComponents().getZipCode() %>
 	<hr class="soft"/>
 	<form class="form-horizontal span6">
 		<div class="control-group">

@@ -27,10 +27,6 @@ public class Location {
 
     private String zip;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
-    private User user;
-
     /**
      * Instantiates a new Location.
     */
@@ -41,15 +37,13 @@ public class Location {
     /**
      * Instantiates a new Location.
      *
-     * @param id            the id*
      * @param streetAddress the street address
      * @param city          the city
      * @param state         the state
      * @param zip   the state postal
      *
      */
-    public Location(int id, String streetAddress, String city, String state, String zip) {
-        this.id = id;
+    public Location( String streetAddress, String city, String state, String zip) {
         this.streetAddress = streetAddress;
         this.city = city;
         this.state = state;
@@ -145,25 +139,6 @@ public class Location {
     */
     public void setZip(String zip) {
         this.zip = zip;
-    }
-
-
-    /**
-     * Sets new user.
-     *
-     * @param user New value of user.
-     */
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return Value of user.
-     */
-    public User getUser() {
-        return user;
     }
 
     @Override

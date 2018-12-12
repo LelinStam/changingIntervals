@@ -23,6 +23,7 @@ public class Blog {
 
     private String blog;
 
+    @Column(name = "date_created")
     private Date dateCreated;
 
     @ManyToOne

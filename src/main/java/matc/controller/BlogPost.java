@@ -50,6 +50,7 @@ public class BlogPost extends HttpServlet {
         blogToAdd.setBlog(blog);
         blogToAdd.setDateCreated(convertToDateViaSqlDate(LocalDate.now()));
         blogToAdd.setUser(user);
+        user.addBlog(blogToAdd);
         blogDao.insert(blogToAdd);
 
         String message = "Thanks for submitting your blog post!";

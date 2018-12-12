@@ -28,8 +28,15 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>account</web-resource-name>
+      <url-pattern>/all-workouts.jsp</url-pattern>
       <url-pattern>/my-workouts.jsp</url-pattern>
-      <url-pattern>/workout-results.jsp</url-pattern>
+      <url-pattern>/new-workout.jsp</url-pattern>
+      <url-pattern>/editforms-workout.jsp</url-pattern>
+      <url-pattern>/verify-address.jsp</url-pattern>
+      <url-pattern>/address.jsp</url-pattern>
+      <url-pattern>/results.jsp</url-pattern>
+      <url-pattern>/progress.jsp</url-pattern>
+      <url-pattern>/blog-posts.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

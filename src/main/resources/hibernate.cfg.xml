@@ -20,6 +20,8 @@
         <mapping class="matc.entity.Role"/>
         <mapping class="matc.entity.Workout"/>
         <mapping class="matc.entity.Location"/>
+        <mapping class="matc.entity.Blog"/>
+
 
 
     </session-factory>

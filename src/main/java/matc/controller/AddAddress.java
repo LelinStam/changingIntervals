@@ -34,6 +34,8 @@ public class AddAddress extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
+        
+        HttpSession newSession = request.getSession();    
 
         // Get Form Parameters
         String streetAddress = request.getParameter("streetAddress");
@@ -50,6 +52,12 @@ public class AddAddress extends HttpServlet {
         Client client = new ClientBuilder(credentials)
                 .buildUsStreetApiClient();
 
+        if(state == "none) {
+           message = "Please pick a state.";
+           newSession.setAttribute("message", message);
+           response.sendRedirect("address.jsp");
+           
+           } else  { 
         Lookup lookup = new Lookup();
         lookup.setStreet(streetAddress);
         lookup.setCity(city);
@@ -68,8 +76,10 @@ public class AddAddress extends HttpServlet {
 
         if (results.isEmpty()) {
             message = "No results- the address is not valid.";
-            HttpSession newSession = request.getSession();
             newSession.setAttribute("message", message);
+                
+            // Redirect
+            response.sendRedirect("address.jsp");    
 
         } else {
 
@@ -98,10 +108,10 @@ public class AddAddress extends HttpServlet {
 
             Candidate singleResult = results.get(0);
             request.setAttribute("address", singleResult);
+                
+            // Redirect
+            response.sendRedirect("verify-address.jsp");  
         }
-
-        // Redirect
-        response.sendRedirect("address.jsp");
 
     }
 

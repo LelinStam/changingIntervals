@@ -51,7 +51,7 @@ public class AddWorkout extends HttpServlet {
          try {
             mileageNumber = Integer.parseInt(mileage);
           } catch (NumberFormatException e) {
-            //log.debug(e);
+            logger.debug("Unable to parse mileage");
             message = "Please enter a number for mileage";
             newSession.setAttribute("message", message);
                     

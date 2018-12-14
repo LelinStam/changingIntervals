@@ -35,6 +35,9 @@ public class AddWorkout extends HttpServlet {
         String mileage = request.getParameter("mileage");
         String username = request.getUserPrincipal().getName();
         int mileageNumber = 0;
+            
+        String message = "";
+        HttpSession newSession = request.getSession();
 
         // Create Daos
         Dao userDao = new Dao(User.class);
@@ -49,6 +52,11 @@ public class AddWorkout extends HttpServlet {
             mileageNumber = Integer.parseInt(mileage);
           } catch (NumberFormatException e) {
             //log.debug(e);
+            message = "Please enter a number for mileage";
+            newSession.setAttribute("message", message);
+                    
+            // Redirect
+            response.sendRedirect("new-workout.jsp");
           }     
 
         // Create objects and add to the database
@@ -60,10 +68,9 @@ public class AddWorkout extends HttpServlet {
         workout.setUser(user);
         workoutDao.insert(workout);
 
-        String message = "*You have successfully entered a new workout. Click <a href=my-workouts.jsp>here</a> to view all workouts";
-        HttpSession newSession = request.getSession();
+        message = "*You have successfully entered a new workout. Click <a href=my-workouts.jsp>here</a> to view all workouts";        
         newSession.setAttribute("message", message);
-
+            
         // Redirect
         response.sendRedirect("new-workout.jsp");
 

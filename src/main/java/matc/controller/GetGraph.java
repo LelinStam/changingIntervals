@@ -47,17 +47,25 @@ public class GetGraph extends HttpServlet {
         List<Workout> workoutsList= convertToList(workouts);
 
         for (int counter = 0; counter < workoutsList.size(); counter++) {
-            Date dateOfCurrentWorkout = workoutsList.get(counter).getDateCreated();
+            Date dateOfCurrentWorkout = workoutsList.get(counter).getDateCreated();                
+             
             if(dateOfCurrentWorkout.after(date.getTime())) {
-                if(mileages.isEmpty()) {
-                    mileages += (Integer.toString(workoutsList.get(counter).getMileage()));
-                } else {
-                    mileages += ("," + Integer.toString(workoutsList.get(counter).getMileage()));
+                if(!mileages.isEmpty()) {
+                    mileages += ",";
                 }
+                mileages += Integer.toString(workoutsList.get(counter).getMileage());
             }
         }
-        req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages
+        
+            
+        if (mileages.isEmpty()) { 
+            message = "No results for this time frame: " + months + "months from today." 
+            req.setAttribute("message", message);        
+        } else {
+            req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages
                 + "&chds=0,10&chxt=x,y&chxl=0:" + getDate(months) + "|1:|1|2|3|4|5|6|7|8|9|10+miles' title='graph' alt='Error generating chart...' />" );
+        }
+            
         //req.setAttribute("mileages",mileages);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/progress.jsp");
         dispatcher.forward(req, resp);

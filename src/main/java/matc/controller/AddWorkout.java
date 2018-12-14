@@ -34,6 +34,7 @@ public class AddWorkout extends HttpServlet {
         String enteredWorkout = request.getParameter("workout");
         String mileage = request.getParameter("mileage");
         String username = request.getUserPrincipal().getName();
+        int mileageNumber = 0;
 
         // Create Daos
         Dao userDao = new Dao(User.class);
@@ -43,11 +44,17 @@ public class AddWorkout extends HttpServlet {
         List<User> users = userDao.getByPropertyEqual("userName", username);
         User user = users.get(0);
         request.setAttribute("workouts", user.getWorkouts());
+            
+         try {
+            mileageNumber = Integer.parseInt(mileage);
+          } catch (NumberFormatException e) {
+            //log.debug(e);
+          }     
 
         // Create objects and add to the database
         Workout workout = new Workout();
         workout.setWorkout(enteredWorkout);
-        workout.setMileage(Integer.parseInt(mileage));
+        workout.setMileage(mileageNumber);
         workout.setDateCreated(convertToDateViaSqlDate(LocalDate.now()));
         workout.setDateModified(convertToDateViaSqlDate(LocalDate.now()));
         workout.setUser(user);

@@ -58,7 +58,7 @@ public class GetGraph extends HttpServlet {
         }
         req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages
                 + "&chds=0,10&chxt=x,y&chxl=0:" + getDate(months) + "|1:|1|2|3|4|5|6|7|8|9|10+miles' title='graph' alt='Error generating chart...' />" );
-        req.setAttribute("mileages",mileages);
+        //req.setAttribute("mileages",mileages);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/progress.jsp");
         dispatcher.forward(req, resp);
     }

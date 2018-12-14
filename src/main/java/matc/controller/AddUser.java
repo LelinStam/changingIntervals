@@ -29,6 +29,7 @@ public class AddUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
+            
         // Get Form Parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -37,6 +38,9 @@ public class AddUser extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
         String dateOfBirth = request.getParameter("dateOfBirth");
+            
+            
+        HttpSession session = request.getSession();
 
         // Create Daos
         Dao userDao = new Dao(User.class);
@@ -48,22 +52,19 @@ public class AddUser extends HttpServlet {
 
         if (usernameCheck.size() != 0) {
             // Check that username is unique
-            message = "*The username you have selected is already in use";
-            HttpSession session = request.getSession();
+            message = "The username you have selected is already in use";
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
 
         } else if (!password.equals(confirmPassword)) {
             // Check that password fields match
-            message = "*The passwords you have entered do not match";
-            HttpSession session = request.getSession();
+            message = "The passwords you have entered do not match";
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
 
         } else if (password.length() < 6 || confirmPassword.length() < 6) {
             // Check that password is at least 6 characters
-            message = "*Your password must contain at least 6 characters";
-            HttpSession session = request.getSession();
+            message = "Your password must contain at least 6 characters";
             session.setAttribute("message", message);
             response.sendRedirect("signup.jsp");
 
@@ -82,6 +83,9 @@ public class AddUser extends HttpServlet {
                 user.setDateOfBirth(parsed);
             } catch(Exception parseException) {
                 logger.debug("unable to parse date");
+                message = "Unable to read date of birth";
+                session.setAttribute("message", message);
+                response.sendRedirect("signup.jsp");    
             }
 
 
@@ -92,8 +96,7 @@ public class AddUser extends HttpServlet {
             user.addRole(role);
             userDao.insert(user);
 
-            message = "*You have successfully signed up. Please log in to access your account.";
-            HttpSession session = request.getSession();
+            message = "You have successfully signed up. Please log in to access your account.";
             session.setAttribute("message", message);
 
             // Redirect

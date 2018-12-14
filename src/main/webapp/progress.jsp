@@ -27,7 +27,7 @@
 
 
 		${image}
-		${mileages}
+		${message}
 
 	<hr class="soft"/>
 	<form class="form-horizontal span6">

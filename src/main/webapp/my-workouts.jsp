@@ -29,6 +29,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<div class="page-header">
 		<h3>My Workouts </h3>
+		<p class="message">${message}</p>
+			<c:remove var="message" />
 	</div>
 	<table id="workoutResults" style="margin:20px;" class="table table-bordered table-striped">
 		<thead>

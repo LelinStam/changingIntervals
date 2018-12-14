@@ -28,7 +28,10 @@ import java.util.List;
 public class EditUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        final Logger logger = LogManager.getLogger(this.getClass());
+        final Logger logger = LogManager.getLogger(this.getClass());            
+        
+        HttpSession session = request.getSession();
+            
         // Get Form Parameters
         String id = request.getParameter("id");
         String username = request.getParameter("userName");
@@ -55,19 +58,21 @@ public class EditUser extends HttpServlet {
             try {
                 Date parsed = format.parse(dateOfBirth);
                 user.setDateOfBirth(parsed);
+                    
             } catch (Exception parseException) {
                 logger.debug("unable to parse date");
+                message= "Unable to read birthdate";
+                session.setAttribute("message", message);
+                    
             }
 
             userDao.saveOrUpdate(user);
 
             message = "You have successfully updated " + username;
-            HttpSession session = request.getSession();
             session.setAttribute("message", message);
 
         } else {
             message = "User not found";
-            HttpSession session = request.getSession();
             session.setAttribute("message", message);
         }
 

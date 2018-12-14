@@ -30,7 +30,7 @@
 				</div>
 				<div class="form-group col-sm-12">
 					<label for="blog">*Blog:</label>
-					<textarea class="text form-control" id="blog" name="blog" required="required" ></textarea>
+					<textarea rows="4" cols="50" class="text form-control" id="blog" name="blog" required="required" ></textarea>
 				</div>
 				<div class="control-group">
 					<div class="controls">

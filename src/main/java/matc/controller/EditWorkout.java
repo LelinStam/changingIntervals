@@ -33,16 +33,30 @@ public class EditWorkout extends HttpServlet {
         String dateModified = request.getParameter("dateModified");
         String workoutDetails = request.getParameter("workout");
         String mileage = request.getParameter("mileage");
+        int mileageNumber = 0;
 
         // Create Daos
         Dao workoutDao = new Dao(Workout.class);
 
         // Validate form
-        String message;
+        String message = "";            
+        HttpSession session = request.getSession();
         Workout workout = (Workout)workoutDao.getById(id);
-
+        
+        try {
+            mileageNumber = Integer.parseInt(mileage);
+                
+          } catch (NumberFormatException e) {
+            logger.debug("Unable to parse mileage");
+            message = "Please enter a number for mileage";
+            newSession.setAttribute("message", message);
+                    
+            // Redirect
+            response.sendRedirect("my-workouts.jsp");
+          }     
+            
         if(workout != null) {
-            workout.setMileage(Integer.parseInt(mileage));
+            workout.setMileage(mileageNumber);
             workout.setWorkout(workoutDetails);
 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -55,17 +69,20 @@ public class EditWorkout extends HttpServlet {
 
             } catch (Exception parseException) {
                 logger.debug("unable to parse date");
+                message = "Cannot read today's date";                     
+                newSession.setAttribute("message", message);
+
+                // Redirect
+                response.sendRedirect("my-workouts.jsp");
             }
 
             workoutDao.saveOrUpdate(workout);
 
             message = "You have successfully updated your workout";
-            HttpSession session = request.getSession();
             session.setAttribute("message", message);
 
         } else {
             message = "Workout not found";
-            HttpSession session = request.getSession();
             session.setAttribute("message", message);
         }
 

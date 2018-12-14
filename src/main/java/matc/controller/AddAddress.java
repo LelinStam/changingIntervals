@@ -53,23 +53,31 @@ public class AddAddress extends HttpServlet {
                 .buildUsStreetApiClient();
 
         if(state == "none) {
-           message = "Please pick a state.";
-           newSession.setAttribute("message", message);
-           response.sendRedirect("address.jsp");
+             message = "Please pick a state.";
+             newSession.setAttribute("message", message);
+             response.sendRedirect("address.jsp");
            
            } else  { 
-        Lookup lookup = new Lookup();
-        lookup.setStreet(streetAddress);
-        lookup.setCity(city);
-        lookup.setState(state);
-        lookup.setZipCode(zip);
+                Lookup lookup = new Lookup();
+                lookup.setStreet(streetAddress);
+                lookup.setCity(city);
+                lookup.setState(state);
+                lookup.setZipCode(zip);
+           }
 
         try {
             client.send(lookup);
+                
         } catch (SmartyException ex) {
             //Logger.debug(ex);
+            message =   "There was an error verifying the Address: " + ex.message();
+            response.sendRedirect("address.jsp");
+                
         } catch (IOException ex) {
-            //log.debug(ex);
+            //log.debug(ex);                
+            message =   "There was an error verifying the Address: " + ex.message();
+            response.sendRedirect("address.jsp");
+                
         }
 
         ArrayList<Candidate> results = lookup.getResult();

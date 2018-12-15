@@ -39,7 +39,6 @@ public class AddUser extends HttpServlet {
         String email = request.getParameter("email");
         String dateOfBirth = request.getParameter("dateOfBirth");
             
-            
         HttpSession session = request.getSession();
 
         // Create Daos

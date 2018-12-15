@@ -27,6 +27,7 @@ public class EditWorkout extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
+
         // Get Form Parameters
         String id = request.getParameter("id");
         String dateCreated = request.getParameter("dateCreated");
@@ -49,7 +50,7 @@ public class EditWorkout extends HttpServlet {
           } catch (NumberFormatException e) {
             logger.debug("Unable to parse mileage");
             message = "Please enter a number for mileage";
-            newSession.setAttribute("message", message);
+            session.setAttribute("message", message);
                     
             // Redirect
             response.sendRedirect("my-workouts.jsp");
@@ -69,8 +70,8 @@ public class EditWorkout extends HttpServlet {
 
             } catch (Exception parseException) {
                 logger.debug("unable to parse date");
-                message = "Cannot read today's date";                     
-                newSession.setAttribute("message", message);
+                message = "Cannot read today's date";
+                session.setAttribute("message", message);
 
                 // Redirect
                 response.sendRedirect("my-workouts.jsp");

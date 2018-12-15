@@ -27,7 +27,9 @@
 					<input type="text" name="lastName" value="<%= user.getLastName()%>" /></td></tr>
 				<tr><td>Username:</td><td>
 					<input type="text" name="userName" value="<%= user.getUserName()%>" required="required"/></td></tr>
-				<tr><td>Password:</td><td>
+                <tr><td>Email:</td><td>
+                    <input type="text" name="email" value="<%= user.getEmail()%>" /></td></tr>
+                <tr><td>Password:</td><td>
 					<input type="password" name="password" value="<%= user.getPassword()%>" required="required"/></td></tr>
 				<tr><td>Date of Birth:</td><td>
 					<input type="Date" name="dateOfBirth" value="<%= user.getDateOfBirth().toString()%>"/></td></tr>

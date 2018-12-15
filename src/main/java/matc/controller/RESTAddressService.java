@@ -32,6 +32,8 @@ public class RESTAddressService extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
 
+        HttpSession newSession = req.getSession();
+
         // Get Form Parameters
         String streetAddress = req.getParameter("streetAddress");
         String city = req.getParameter("city");
@@ -42,14 +44,9 @@ public class RESTAddressService extends HttpServlet {
         String authToken = "53dTZDZ6bZJ21KwmmTxc";
         String message = "";
 
-        // We recommend storing your secret keys in environment variables instead---it's safer!
-        // String authId = System.getenv("SMARTY_AUTH_ID");
-        // String authToken = System.getenv("SMARTY_AUTH_TOKEN");
 
         StaticCredentials credentials = new StaticCredentials(authId, authToken);
         Client client = new ClientBuilder(credentials)
-                // Uncomment the line below to try it with a proxy
-                // .withProxy(Proxy.Type.HTTP, "localhost", 8080)
                 .buildUsStreetApiClient();
 
         Lookup lookup = new Lookup();
@@ -60,23 +57,31 @@ public class RESTAddressService extends HttpServlet {
 
         try {
             client.send(lookup);
+
         } catch (SmartyException ex) {
-            //Logger.debug(ex);
+            logger.debug("unable to verify address: " + ex);
+            message = "Unable to verify address provided";
+            newSession.setAttribute("message", message);
+
+            resp.sendRedirect("address.jsp");
+
         } catch (IOException ex) {
-            //log.debug(ex);
+            logger.debug("unable to verify address: " + ex);
+            message = "Unable to verify address provided";
+            newSession.setAttribute("message", message);
+
+            resp.sendRedirect("address.jsp");
         }
 
         ArrayList<Candidate> results = lookup.getResult();
 
         if (results.isEmpty()) {
             message = "No results- the address is not valid.";
-            HttpSession newSession = req.getSession();
             newSession.setAttribute("message", message);
 
             resp.sendRedirect("address.jsp");
         } else {
             message = "Please confirm the address below.";
-            HttpSession newSession = req.getSession();
             newSession.setAttribute("message", message);
 
             Candidate singleResult = results.get(0);

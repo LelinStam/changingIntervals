@@ -32,15 +32,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                     <label class="control-label" for="confirmPassword">Confirm Password</label>
                                     <div class="controls">
-                                        <input class="span3"  type="password" id="confirmPassword" name="confirmPassword" placeholder="confirmPassword" required="required">
+                                        <input class="span3"  type="password" id="confirmPassword" name="confirmPassword" placeholder="confirm password" required="required">
                                     </div>
                                     <label class="control-label" for="firstName">First Name</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="firstName" name="firstName" placeholder="firstName" required="required">
+                                        <input class="span3"  type="text" id="firstName" name="firstName" placeholder="first name" required="required">
                                     </div>
                                     <label class="control-label" for="lastName">Last Name</label>
                                     <div class="controls">
-                                        <input class="span3"  type="text" id="lastName" name="lastName" placeholder="lastName" required="required">
+                                        <input class="span3"  type="text" id="lastName" name="lastName" placeholder="last name" required="required">
                                     </div>
                                     <label class="control-label" for="email">Email</label>
                                     <div class="controls">
@@ -48,7 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                     <label class="control-label" for="dateOfBirth">Date of Birth</label>
                                     <div class="controls">
-                                        <input class="span3"  type="date" id="dateOfBirth" name="dateOfBirth" placeholder="dateOfBirth" required="required">
+                                        <input class="span3"  type="Date" id="dateOfBirth" name="dateOfBirth" placeholder="date of birth" required="required">
                                     </div>
                                 </div>
                                 <div class="controls">

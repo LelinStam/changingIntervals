@@ -1,6 +1,5 @@
 package matc.controller;
 
-import matc.entity.Role;
 import matc.entity.User;
 import matc.persistence.Dao;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Servlet to add new user to the database.
@@ -53,6 +51,7 @@ public class EditUser extends HttpServlet {
             user.setLastName(lastName);
             user.setPassword(password);
             user.setUserName(username);
+            user.setEmail(email);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
             try {

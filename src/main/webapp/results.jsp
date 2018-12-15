@@ -32,9 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
-			<th>Street Address</th>
-			<th>City</th>
-			<th>State & Zip</th>
+			<th>Address</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -42,9 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<tr>
 				<td>${user.userName} </td>
 				<td>${user.email}</td>
-				<td>${user.location.streetAddress}</td>
-				<td>${user.location.city}</td>
-				<td>${user.location.state} ${user.location.zip}</td>
+                <td>${user.location}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

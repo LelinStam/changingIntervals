@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -31,6 +30,7 @@ public class GetGraph extends HttpServlet {
 
         String username = req.getUserPrincipal().getName();
         String mileages = "";
+        String message = "";
         int mileage= 0;
 
         String months = req.getParameter("months");
@@ -59,8 +59,8 @@ public class GetGraph extends HttpServlet {
         
             
         if (mileages.isEmpty()) { 
-            message = "No results for this time frame: " + months + "months from today." 
-            req.setAttribute("message", message);        
+            message = "No results for this time frame: " + months + "months from today.";
+            req.setAttribute("message", message);
         } else {
             req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages
                 + "&chds=0,10&chxt=x,y&chxl=0:" + getDate(months) + "|1:|1|2|3|4|5|6|7|8|9|10+miles' title='graph' alt='Error generating chart...' />" );
@@ -70,8 +70,6 @@ public class GetGraph extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/progress.jsp");
         dispatcher.forward(req, resp);
     }
-
-    //public void getDates() {}
 
     public List<Workout> convertToList(Set<Workout> workouts) {
         List<Workout> mainList = new ArrayList<Workout>();

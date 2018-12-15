@@ -52,74 +52,71 @@ public class AddAddress extends HttpServlet {
         Client client = new ClientBuilder(credentials)
                 .buildUsStreetApiClient();
 
-        if(state == "none) {
+        if(state == "none") {
              message = "Please pick a state.";
              newSession.setAttribute("message", message);
              response.sendRedirect("address.jsp");
            
            } else  { 
-                Lookup lookup = new Lookup();
-                lookup.setStreet(streetAddress);
-                lookup.setCity(city);
-                lookup.setState(state);
-                lookup.setZipCode(zip);
-       
+            Lookup lookup = new Lookup();
+            lookup.setStreet(streetAddress);
+            lookup.setCity(city);
+            lookup.setState(state);
+            lookup.setZipCode(zip);
 
-                try {
-                    client.send(lookup);
 
-                } catch (SmartyException ex) {
-                    logger.debug("There was an error verifying the Address.");
-                    message =   "There was an error verifying the Address.";
-                    response.sendRedirect("address.jsp");
+            try {
+                client.send(lookup);
 
-                } catch (IOException ex) {
-                    logger.debug("there was an error verifying the address");                
-                    message =   "There was an error verifying the Address.";
-                    response.sendRedirect("address.jsp");
+            } catch (SmartyException ex) {
+                logger.debug("There was an error verifying the Address.");
+                message =   "There was an error verifying the Address.";
+                response.sendRedirect("address.jsp");
 
-                }
+            } catch (IOException ex) {
+                logger.debug("there was an error verifying the address");
+                message =   "There was an error verifying the Address.";
+                response.sendRedirect("address.jsp");
 
-                ArrayList<Candidate> results = lookup.getResult();
+            }
 
-                if (results.isEmpty()) {
-                    logger.debug("No results-- invalid address");    
-                    message = "No results- the address is not valid.";
-                    newSession.setAttribute("message", message);
+            ArrayList<Candidate> results = lookup.getResult();
 
-                    // Redirect
-                    response.sendRedirect("address.jsp");    
+            if (results.isEmpty()) {
+                logger.debug("No results-- invalid address");
+                message = "No results- the address is not valid.";
+                newSession.setAttribute("message", message);
 
-                } else {
+                // Redirect
+                response.sendRedirect("address.jsp");
 
-                    // Create Daos
-                    Dao userDao = new Dao(User.class);
-                    Dao locationDao = new Dao(Location.class);
+            } else {
 
-                    // find user by session
-                    List<User> users = userDao.getByPropertyEqual("userName", username);
-                    User user = users.get(0);
+                // Create Daos
+                Dao userDao = new Dao(User.class);
+                Dao locationDao = new Dao(Location.class);
 
-                    // Create objects and add to the database
-                    Location location = new Location();
-                    location.setStreetAddress(streetAddress);
-                    location.setCity(city);
-                    location.setState(state);
-                    location.setZip(zip);
+                // find user by session
+                List<User> users = userDao.getByPropertyEqual("userName", username);
+                User user = users.get(0);
 
-                    locationDao.insert(location);
+                // Create objects and add to the database
+                Location location = new Location();
+                location.setStreetAddress(streetAddress);
+                location.setCity(city);
+                location.setState(state);
+                location.setZip(zip);
 
-                    user.setLocation(location);
+                locationDao.insert(location);
 
-                    message = "*You have successfully entered a new address. Click <a href=results.jsp>here</a> to go home";
-                    newSession.setAttribute("message", message);
+                user.setLocation(location);
 
-                    Candidate singleResult = results.get(0);
-                    request.setAttribute("address", singleResult);
+                Candidate singleResult = results.get(0);
+                request.setAttribute("address", singleResult);
 
-                    // Redirect
-                    response.sendRedirect("verify-address.jsp");  
-                }
+                // Redirect
+                response.sendRedirect("verify-address.jsp");
+            }
         }
 
     }

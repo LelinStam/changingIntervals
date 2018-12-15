@@ -46,14 +46,13 @@
         </a>
         <div class="navbar-inner">
             <a class="brand" href="user.jsp"><img src="themes/images/pal.png" alt="pal" width="50px"/></a>
-            <form class="form-inline navbar-search" action="/searchWorkouts" >
-                <input id="searchTerm" name="searchTerm" class="srchTxt" type="text" />
+            <form class="form-inline navbar-search" action="sendToPage" >
                 <select name="searchType" class="srchTxt">
-                    <option>Workout </option>
-                    <option>Date Created </option>
-                    <option>Date Modified </option>
+                    <option value="workout">Workout </option>
+                    <option value="address">Address </option>
+                    <option value="blog">Blog </option>
                 </select>
-                <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
+                <button type="submit" name="submit" value="search" id="submitButton" class="btn btn-primary">Go</button>
             </form>
             <ul id="topMenu" class="nav pull-right">
                 <li class=""><a href="user.jsp">Edit Users</a></li>

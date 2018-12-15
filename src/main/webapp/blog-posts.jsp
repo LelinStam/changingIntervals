@@ -30,7 +30,7 @@
 				</div>
 				<div class="form-group col-sm-12">
 					<label for="blog">*Blog:</label>
-					<textarea rows="4" cols="50" class="text form-control" id="blog" name="blog" required="required" ></textarea>
+					<textarea rows="4" cols="750" class="text form-control" id="blog" name="blog" required="required" ></textarea>
 				</div>
 				<div class="control-group">
 					<div class="controls">
@@ -40,7 +40,7 @@
 			</form>
 			<c:forEach var="blog" items="${blogs}">
 			<hr class="soft"/>
-			<h5>${blog.title}</h5><br/>
+			<h5>${blog.title}</h5> <p class="pull-right">${blog.dateCreated}</p><br/>
 			<p>
 				${blog.blog}
 			</p>

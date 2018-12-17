@@ -16,9 +16,8 @@ Training individually can be very difficult and de-motivating. The Swim Training
 
 * Maven
 
-* IDE
-
 * intelij IDEA
 
 * Log4j
 
+* SmartyStreets API

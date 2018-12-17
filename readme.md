@@ -16,7 +16,7 @@ Training individually can be very difficult and de-motivating. The Swim Training
 
 * Maven
 
-* intelij IDEA
+* intellij IDEA
 
 * Log4j
 

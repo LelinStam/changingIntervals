@@ -24,6 +24,4 @@ Training individually can be very difficult and de-motivating. The Swim Training
 
 ### [AWS Link](http://18.221.158.65:8080/SwimTrainingPal/)
 
-http://18.221.158.65:8080/SwimTrainingPal/
-
-### [Demo Video](DemoVideo.mp4)
+### [Demo Video](Demo-video.mp4)

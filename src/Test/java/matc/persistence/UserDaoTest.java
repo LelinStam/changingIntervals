@@ -45,11 +45,11 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
+        User newUser = new User("Mercury", "Mack", "mmack", new Date(1988, 12, 13), "password");
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
-        assertTrue(insertedUser.equals(newUser));
+        assertTrue(newUser.equals(insertedUser));
     }
 
     /**
@@ -57,11 +57,11 @@ class UserDaoTest {
      */
     @Test
     void insertWithWorkoutSuccess() {
-        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
+        User newUser = new User("Maple", "Marple", "mmarple", new Date(1968, 01, 01), "password");
 
         String workout = "2x500 warmup, 2x400 free on 2:20, 300 cooldown";
-        Date dateCreated = new Date("2016-11-06");
-        Date dateModified = new Date("2018-01-01");
+        Date dateCreated = new Date(2016, 11, 06);
+        Date dateModified = new Date(2018, 12, 01);
         int mileage = 3;
         Workout newWorkout = new Workout(workout, dateCreated, dateModified, mileage, newUser);
 

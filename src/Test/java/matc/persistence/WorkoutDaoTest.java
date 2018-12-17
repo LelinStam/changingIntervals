@@ -5,14 +5,22 @@ import matc.entity.Workout;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * The type Workout dao test.
+ */
 class WorkoutDaoTest {
 
+    /**
+     * The Dao.
+     */
     Dao dao;
+    /**
+     * The User dao.
+     */
+    Dao userDao;
 
     /**
      * Run set up tasks before each test:
@@ -24,7 +32,8 @@ class WorkoutDaoTest {
 
         matc.test.util.Database database = matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
-        dao = new Dao(User.class);
+        dao = new Dao(Workout.class);
+        userDao = new Dao(User.class);
     }
 
     /**
@@ -32,45 +41,77 @@ class WorkoutDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = (User)dao.getById("3");
-        assertEquals("Barney", retrievedUser.getFirstName());
-        assertEquals("Curry", retrievedUser.getLastName());
-        assertEquals("bcurry", retrievedUser.getUserName());
-        assertEquals(3, retrievedUser.getId());
+        Workout retrievedWorkout = (Workout)dao.getById("2");
+        assertEquals("400SKIMPS, 3x100 free on 1:30, cooldown choice", retrievedWorkout.getWorkout());
+        assertEquals(2, retrievedWorkout.getMileage());
+        assertEquals(2, retrievedWorkout.getId());
     }
 
     /**
      * Verify successful insert of a user
-     */
+
     @Test
     void insertSuccess() {
 
-        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
-        int id = dao.insert(newUser);
+        User user = (User)userDao.getById("1");
+
+        Workout newWorkout = new Workout("Swam across Lake Michigan", new Date(2018,8,15), new Date(2018,8,15), 20, user);
+        int id = dao.insert(newWorkout);
         assertNotEquals(0,id);
-        User insertedUser = (User)dao.getById(Integer.toString(id));
-        assertTrue(insertedUser.equals(newUser));
+        Workout insertedWorkout = (Workout)dao.getById(Integer.toString(id));
+        assertTrue(insertedWorkout.equals(newWorkout));
+    }
+
+
+    /**
+     * Update success.
+
+    @Test
+    void updateSuccess() {
+        int newMileage = 3;
+        Workout workoutToUpdate = (Workout)dao.getById("2");
+        workoutToUpdate.setMileage(newMileage);
+        dao.saveOrUpdate(workoutToUpdate);
+        Workout retrievedWorkout = (Workout)dao.getById("2");
+        assertTrue(workoutToUpdate.equals(retrievedWorkout));
+    }
+     */
+
+    /**
+     * Verify successful retrieval of all users
+     */
+    @Test
+    void getAllSuccess() {
+        List<Workout> workouts = dao.getAll();
+        assertEquals(2, workouts.size());
     }
 
     /**
-     * Verify successful insert of a user
+     * Verify successful get by property (equal match)
      */
     @Test
-    void insertWithWorkoutSuccess() {
-        User newUser = new User("Fred", "Flintstone", "fflintstone", new Date("1968-01-01"), "password");
+    void getByPropertyEqualSuccess() {
+        List<Workout> workouts = dao.getByPropertyLike("workout", "skimps");
+        assertEquals(2, workouts.size());
+        assertEquals(1, workouts.get(0).getId());
+    }
 
-        String workout = "2x500 warmup, 2x400 free on 2:20, 300 cooldown";
-        Date dateCreated = new Date("2016-11-06");
-        Date dateModified = new Date("2018-01-01");
-        int mileage = 3;
-        Workout newWorkout = new Workout(workout, dateCreated, dateModified, mileage, newUser);
+    /**
+     * Verify successful get by property (like match)
+     */
+    @Test
+    void getByPropertyLikeSuccess() {
+        List<Workout> workouts = dao.getByPropertyLike("workout", "30");
+        assertEquals(1, workouts.size());
+    }
 
-        newUser.addWorkout(newWorkout);
-
-        int id = dao.insert(newUser);
-        assertNotEquals(0,id);
-        User insertedUser = (User)dao.getById(Integer.toString(id));
-        assertTrue(newUser.equals(insertedUser));
+    /**
+     * Gets by property equal.
+     */
+    @Test
+    void getByPropertyEqual() {
+        List<Workout> workouts = dao.getByPropertyEqual("workout", "400SKIMPS, 3x100 free on 1:30, cooldown choice");
+        assertEquals(1, workouts.size());
     }
 
     /**
@@ -80,53 +121,6 @@ class WorkoutDaoTest {
     void deleteSuccess() {
         dao.delete(dao.getById("3"));
         assertNull(dao.getById("3"));
-    }
-
-    /**
-     * Update success.
-     */
-    @Test
-    void updateSuccess() {
-        String newLastName = "Davis";
-        User userToUpdate = (User)dao.getById("3");
-        userToUpdate.setLastName(newLastName);
-        dao.saveOrUpdate(userToUpdate);
-        User retrievedUser = (User)dao.getById("3");
-        assertTrue(userToUpdate.equals(retrievedUser));
-    }
-
-    /**
-     * Verify successful retrieval of all users
-     */
-    @Test
-    void getAllSuccess() {
-        List<User> users = dao.getAll();
-        assertEquals(6, users.size());
-    }
-
-    /**
-     * Verify successful get by property (equal match)
-     */
-    @Test
-    void getByPropertyEqualSuccess() {
-        List<User> users = dao.getByPropertyLike("lastName", "Curry");
-        assertEquals(1, users.size());
-        assertEquals(3, users.get(0).getId());
-    }
-
-    /**
-     * Verify successful get by property (like match)
-     */
-    @Test
-    void getByPropertyLikeSuccess() {
-        List<User> users = dao.getByPropertyLike("lastName", "c");
-        assertEquals(3, users.size());
-    }
-
-    @Test
-    void getByPropertyEqual() {
-        List<User> users = dao.getByPropertyEqual("firstName", "Dawn");
-        assertEquals(1, users.size());
     }
 
 }

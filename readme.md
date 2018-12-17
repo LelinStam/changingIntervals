@@ -21,3 +21,7 @@ Training individually can be very difficult and de-motivating. The Swim Training
 * Log4j
 
 * SmartyStreets API
+
+### AWS Link
+
+http://18.221.158.65:8080/SwimTrainingPal/

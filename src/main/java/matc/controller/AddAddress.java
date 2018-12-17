@@ -113,12 +113,14 @@ public class AddAddress extends HttpServlet {
 
                 Candidate singleResult = results.get(0);
 
+
+                message = "You have successfully added the addres: ";
+                newSession.setAttribute("message", message);
+
                 String address = singleResult.getComponents().getPrimaryNumber() + ' ' + singleResult.getComponents().getStreetName()
                         + ' ' + singleResult.getComponents().getStreetSuffix() + ' ' + singleResult.getComponents().getCityName()
                         + ' ' + singleResult.getComponents().getState() + ' ' + singleResult.getComponents().getZipCode();
                 newSession.setAttribute("address", address);
-
-                newSession.setAttribute("user", user);
 
                 // Redirect
                 response.sendRedirect("address.jsp");

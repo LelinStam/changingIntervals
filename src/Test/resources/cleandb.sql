@@ -1,6 +1,3 @@
-delete from locations;
-insert into locations values (1, '345 Market St', 'Milwaukee', 'WI', '45660'), (2, '2402 Columbus Ln', 'Madison', 'WI', '54482'), (3, '14 Gingerbread Ln', 'North Pole', 'AC', '70001');
-
 delete from user;
 INSERT INTO user VALUES (1,'Joe','Coyne','jcoyne','supersecret1','1964-04-01', null, 'jcoyne@aol.com'),(2,'Fred','Hensen','fhensen','supersecret2','1988-05-08', 3, 'fhensen@yahoo.com'),(3,'Barney','Curry','bcurry','supersecret3','1947-11-11', null, 'bubba@myworkingfarm.org'),(4,'Karen','Mack','kmack','supersecret4','1986-07-08', null, 'catlover33@gmail.com'),(5,'Dianne','Klein','dklein','supersecret5','1991-09-22', 2, 'Dianne@kleingardens.com'),(6,'Dawn','Tillman','dtillman','supersecret6','1979-08-30', 1, '2399tillman@aol.com');
 

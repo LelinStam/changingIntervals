@@ -72,6 +72,7 @@ public class EditUser extends HttpServlet {
 
         } else {
             message = "User not found";
+            logger.debug("User not found");
             session.setAttribute("message", message);
         }
 

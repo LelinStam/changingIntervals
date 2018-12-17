@@ -11,10 +11,13 @@
 		<li class="active">New Address</li>
     </ul>
 		<h3> New Address </h3>
+		<c:if test="${address!=null}">
+			<p You have successfully added address : ${address} </p>
+		</c:if>
 		<p class="message">${message}</p>
 		<c:remove var="message" />
 		<p>Please fill out the form to create your new address</p>
-		<form action="verifyAddress" method="post">
+		<form action="addAddress" method="post">
 			<div class="form-group col-sm-12">
 				<label for="streetAddress">*Street Address:</label>
 				<input type="text" class="text form-control" id="streetAddress" name="streetAddress" required="required" />

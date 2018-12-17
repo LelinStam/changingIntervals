@@ -46,7 +46,7 @@ public class User {
 
     @OneToOne
     @JoinColumn(name = "locations_id",
-            foreignKey = @ForeignKey(name = "user_Locations")
+            foreignKey = @ForeignKey(name = "user_locations")
     )
     private Location location;
 

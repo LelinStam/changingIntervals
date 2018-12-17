@@ -85,4 +85,6 @@ TIME LOG (not including class time)
         3.5hr Ind Project
 
 12/12:  4hr Ind project
-12/15:  1hr
+12/15:  3hr Ind Project
+12/16:  1hr Ind Project
+12/17:  8am

@@ -40,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<tr>
 				<td>${user.userName} </td>
 				<td>${user.email}</td>
-                <td>${user.location}</td>
+                <td>${user.location.streetAddress}<br> ${user.location.city}, &nbsp ${user.location.state} &nbsp ${user.location.zip}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

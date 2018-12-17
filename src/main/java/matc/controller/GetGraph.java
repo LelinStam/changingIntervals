@@ -34,12 +34,9 @@ public class GetGraph extends HttpServlet {
         int mileage= 0;
 
         String months = req.getParameter("months");
+
         Calendar date = Calendar.getInstance();
-        if(months=="3") {
-            date.set(Calendar.MONTH, Calendar.OCTOBER);
-        } else if(months=="6") {
-            date.set(Calendar.MONTH, Calendar.JULY);
-        }
+        date.add(Calendar.MONTH, -(Integer.parseInt(months)));
 
         List<User> users = userDao.getByPropertyEqual("userName", username);
         User user = users.get(0);
@@ -59,7 +56,8 @@ public class GetGraph extends HttpServlet {
         
             
         if (mileages.isEmpty()) { 
-            message = "No results for this time frame: " + months + "months from today.";
+            message = "No results for the time frame starting " + date.get(Calendar.MONTH) + "/" + date.get(Calendar.DATE)
+                        + ", " + date.get(Calendar.YEAR) + ", " + months + " months from today.";
             req.setAttribute("message", message);
         } else {
             req.setAttribute("image", "<img src='http://services.sapo.pt/Chart/Get?cht=lc&chs=400x200&chd=t:" + mileages

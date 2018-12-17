@@ -78,8 +78,8 @@ class UserDaoTest {
      */
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getById("3"));
-        assertNull(dao.getById("3"));
+        dao.delete(dao.getById("5"));
+        assertNull(dao.getById("5"));
     }
 
     /**
@@ -101,7 +101,7 @@ class UserDaoTest {
     @Test
     void getAllSuccess() {
         List<User> users = dao.getAll();
-        assertEquals(6, users.size());
+        assertEquals(5, users.size());
     }
 
     /**
@@ -109,9 +109,9 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<User> users = dao.getByPropertyLike("lastName", "Curry");
+        List<User> users = dao.getByPropertyLike("lastName", "Coyne");
         assertEquals(1, users.size());
-        assertEquals(3, users.get(0).getId());
+        assertEquals(1, users.get(0).getId());
     }
 
     /**
@@ -120,7 +120,7 @@ class UserDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<User> users = dao.getByPropertyLike("lastName", "c");
-        assertEquals(3, users.size());
+        assertEquals(2, users.size());
     }
 
     @Test

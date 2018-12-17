@@ -34,8 +34,6 @@ public class AddAddress extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
-        
-        HttpSession newSession = request.getSession();    
 
         // Get Form Parameters
         String streetAddress = request.getParameter("streetAddress");
@@ -44,20 +42,22 @@ public class AddAddress extends HttpServlet {
         String zip = request.getParameter("zip");
         String username = request.getUserPrincipal().getName();
 
+
         String authId = "f39d9e4e-ce1b-48eb-5a02-89391dba1a91";
         String authToken = "53dTZDZ6bZJ21KwmmTxc";
         String message = "";
+        HttpSession newSession = request.getSession();
 
         StaticCredentials credentials = new StaticCredentials(authId, authToken);
         Client client = new ClientBuilder(credentials)
                 .buildUsStreetApiClient();
 
-        if(state == "none") {
-             message = "Please pick a state.";
-             newSession.setAttribute("message", message);
-             response.sendRedirect("address.jsp");
-           
-           } else  { 
+        if (state.equals("none")) {
+            message = "Please pick a state.";
+            newSession.setAttribute("message", message);
+            response.sendRedirect("address.jsp");
+
+        } else {
             Lookup lookup = new Lookup();
             lookup.setStreet(streetAddress);
             lookup.setCity(city);
@@ -70,12 +70,12 @@ public class AddAddress extends HttpServlet {
 
             } catch (SmartyException ex) {
                 logger.debug("There was an error verifying the Address.");
-                message =   "There was an error verifying the Address.";
+                message = "There was an error verifying the Address.";
                 response.sendRedirect("address.jsp");
 
             } catch (IOException ex) {
                 logger.debug("there was an error verifying the address");
-                message =   "There was an error verifying the Address.";
+                message = "There was an error verifying the Address.";
                 response.sendRedirect("address.jsp");
 
             }
@@ -92,13 +92,13 @@ public class AddAddress extends HttpServlet {
 
             } else {
 
-                // Create Daos
+                // Create Daos */
                 Dao userDao = new Dao(User.class);
                 Dao locationDao = new Dao(Location.class);
 
                 // find user by session
-                List<User> users = userDao.getByPropertyEqual("userName", username);
-                User user = users.get(0);
+                 List<User> users = userDao.getByPropertyEqual("userName", username);
+                 User user = users.get(0);
 
                 // Create objects and add to the database
                 Location location = new Location();
@@ -112,13 +112,17 @@ public class AddAddress extends HttpServlet {
                 user.setLocation(location);
 
                 Candidate singleResult = results.get(0);
-                request.setAttribute("address", singleResult);
+
+                String address = singleResult.getComponents().getPrimaryNumber() + ' ' + singleResult.getComponents().getStreetName()
+                        + ' ' + singleResult.getComponents().getStreetSuffix() + ' ' + singleResult.getComponents().getCityName()
+                        + ' ' + singleResult.getComponents().getState() + ' ' + singleResult.getComponents().getZipCode();
+                newSession.setAttribute("address", address);
+
+                newSession.setAttribute("user", user);
 
                 // Redirect
-                response.sendRedirect("verify-address.jsp");
+                response.sendRedirect("address.jsp");
             }
         }
-
     }
-
 }

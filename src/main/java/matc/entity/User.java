@@ -44,7 +44,7 @@ public class User {
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "locations_id",
             foreignKey = @ForeignKey(name = "user_locations")
     )
@@ -266,6 +266,15 @@ public class User {
      */
     public Set<Workout> getWorkouts() {
         return workouts;
+    }
+
+    /**
+     * Gets blogs.
+     *
+     * @return the blogs
+     */
+    public Set<Blog> getBlogs() {
+        return blogs;
     }
 
     /**

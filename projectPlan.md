@@ -88,11 +88,10 @@ x finalize all table creations
 x finalize front-end prettifying (JQuery, bootstrap, etc)
 
 Week 16
- Final Presentation
+x Final Presentation
 x Create video
  Implement Code Review Feedback
  Unit test all api integrations
- Finalize all documentation
- Code quality check
-x Create the my workouts dao unit tests
- Final touches before code complete
+x Finalize all documentation
+x Code quality check
+x Create all dao unit tests

@@ -1,5 +1,7 @@
 package matc.persistence;
 
+import matc.entity.Blog;
+import matc.entity.Location;
 import matc.entity.User;
 import matc.entity.Workout;
 import org.junit.jupiter.api.BeforeEach;
@@ -71,6 +73,37 @@ class UserDaoTest {
         assertNotEquals(0,id);
         User insertedUser = (User)dao.getById(Integer.toString(id));
         assertTrue(newUser.equals(insertedUser));
+    }
+
+    @Test
+    void insertBlogSuccess() {
+        User newUser = new User("Dorothy", "Doll", "ddoll", new Date(1968, 01, 01), "password");
+
+        String title = "My Swim Post";
+        String blogPost = "I swim daily since I was 9. For me, it is the only exercise that works full body.";
+        Date dateCreated = new Date(2018, 9, 13);
+        Blog blog = new Blog(title, blogPost, dateCreated, newUser);
+        newUser.addBlog(blog);
+
+        int id = dao.insert(newUser);
+        assertNotEquals(0, id);
+        assertEquals(1, newUser.getBlogs().size());
+    }
+
+    @Test
+    void insertLocationSuccess() {
+        User newUser = new User("Timmy", "Wallis", "twallis", new Date(1968, 01, 01), "password");
+
+        String streetAddress = "123 Corey Ln";
+        String city = "Kensington";
+        String state = "MA";
+        String zip = "34778";
+        Location location = new Location(streetAddress, city, state, zip);
+        newUser.setLocation(location);
+
+        int id = dao.insert(newUser);
+        assertNotEquals(0, id);
+        assertNotNull(newUser.getLocation());
     }
 
     /**

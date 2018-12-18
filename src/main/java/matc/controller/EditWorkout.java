@@ -16,7 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Servlet to add new user to the database.
+ * Servlet to edit workout and save to the database.
+ *
  * @author lclemens
  */
 @WebServlet(

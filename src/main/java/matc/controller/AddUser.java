@@ -19,6 +19,7 @@ import java.util.List;
 
 /**
  * Servlet to add new user to the database.
+ *
  * @author lclemens
  */
 @WebServlet(

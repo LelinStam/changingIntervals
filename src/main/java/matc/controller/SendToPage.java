@@ -10,10 +10,10 @@ import java.io.IOException;
 
 
 /**
- * A simple servlet to welcome the user.
+ * A simple servlet to send user to selected page.
+ *
  * @author lclemens
  */
-
 @WebServlet(
         urlPatterns = {"/sendToPage"}
 )

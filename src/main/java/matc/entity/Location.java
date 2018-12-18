@@ -29,7 +29,7 @@ public class Location {
 
     /**
      * Instantiates a new Location.
-    */
+     */
     public Location() {
     }
 
@@ -40,8 +40,7 @@ public class Location {
      * @param streetAddress the street address
      * @param city          the city
      * @param state         the state
-     * @param zip   the state postal
-     *
+     * @param zip           the state postal
      */
     public Location( String streetAddress, String city, String state, String zip) {
         this.streetAddress = streetAddress;
@@ -54,7 +53,7 @@ public class Location {
      * Gets id.
      *
      * @return the id
-    */
+     */
     public int getId() {
         return id;
     }
@@ -63,7 +62,7 @@ public class Location {
      * Sets id.
      *
      * @param id the id
-    */
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -73,7 +72,7 @@ public class Location {
      * Gets street address.
      *
      * @return the street address
-    */
+     */
     public String getStreetAddress() {
         return streetAddress;
     }
@@ -82,7 +81,7 @@ public class Location {
      * Sets street address.
      *
      * @param streetAddress the street address
-    */
+     */
     public void setStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
     }
@@ -91,7 +90,7 @@ public class Location {
      * Gets city.
      *
      * @return the city
-    */
+     */
     public String getCity() {
         return city;
     }
@@ -100,7 +99,7 @@ public class Location {
      * Sets city.
      *
      * @param city the city
-    */
+     */
     public void setCity(String city) {
         this.city = city;
     }
@@ -127,7 +126,7 @@ public class Location {
      * Gets state postal.
      *
      * @return the state postal
-    */
+     */
     public String getZip() {
         return zip;
     }
@@ -136,7 +135,7 @@ public class Location {
      * Sets state postal.
      *
      * @param zip the state postal
-    */
+     */
     public void setZip(String zip) {
         this.zip = zip;
     }

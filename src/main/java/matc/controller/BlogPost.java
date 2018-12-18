@@ -18,7 +18,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Servlet to add new user to the database.
+ * Servlet to add new blog to the database.
+ *
  * @author lclemens
  */
 @WebServlet(
@@ -62,6 +63,12 @@ public class BlogPost extends HttpServlet {
 
     }
 
+    /**
+     * Convert to date via sql date date.
+     *
+     * @param dateToConvert the date to convert
+     * @return the date
+     */
     public Date convertToDateViaSqlDate(LocalDate dateToConvert) {
         return java.sql.Date.valueOf(dateToConvert);
     }

@@ -47,6 +47,7 @@ public class Workout {
      * @param workout      the workout
      * @param dateCreated  the date
      * @param dateModified the date
+     * @param mileage      the mileage
      * @param user         the user
      */
     public Workout(String workout, Date dateCreated, Date dateModified, int mileage, User user ) {
@@ -187,8 +188,7 @@ public class Workout {
                 dateCreated == workout1.dateCreated &&
                 dateModified == workout1.dateModified &&
                 mileage == workout1.mileage &&
-                Objects.equals(workout, workout1.workout) &&
-                Objects.equals(user, workout1.user);
+                Objects.equals(workout, workout1.workout);
     }
 
     @Override

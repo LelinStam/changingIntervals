@@ -101,7 +101,7 @@ class UserDaoTest {
     @Test
     void getAllSuccess() {
         List<User> users = dao.getAll();
-        assertEquals(6, users.size());
+        assertEquals(5, users.size());
     }
 
     /**

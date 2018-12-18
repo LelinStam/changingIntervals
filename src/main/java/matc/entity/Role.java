@@ -7,7 +7,6 @@ import java.util.Objects;
 /**
  * The type role.
  */
-
 @Entity(name = "Role")
 @Table(name = "role")
 public class Role {
@@ -39,8 +38,9 @@ public class Role {
     /**
      * Instantiates a new Role.
      *
-     * @param role        the name
-     * @param user        the user
+     * @param role     the name
+     * @param user     the user
+     * @param userName the user name
      */
     public Role(String role, User user, String userName ) {
         this.user = user;

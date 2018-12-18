@@ -23,7 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Servlet to add new user to the database.
+ * Servlet to add new address to the database.
+ *
  * @author lclemens
  */
 @WebServlet(

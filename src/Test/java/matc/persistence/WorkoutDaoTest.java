@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 /**
  * The type Workout dao test.
  */
@@ -59,7 +60,7 @@ class WorkoutDaoTest {
         int id = dao.insert(newWorkout);
         assertNotEquals(0,id);
         Workout insertedWorkout = (Workout)dao.getById(Integer.toString(id));
-        assertTrue(insertedWorkout.equals(newWorkout));
+        assertTrue(newWorkout.equals(insertedWorkout));
     }
 
 
@@ -73,9 +74,10 @@ class WorkoutDaoTest {
         workoutToUpdate.setMileage(newMileage);
         dao.saveOrUpdate(workoutToUpdate);
         Workout retrievedWorkout = (Workout)dao.getById("2");
-        assertTrue(workoutToUpdate.equals(retrievedWorkout));
+        assertTrue(retrievedWorkout.equals(workoutToUpdate));
     }
      */
+
 
     /**
      * Verify successful retrieval of all users
@@ -83,7 +85,7 @@ class WorkoutDaoTest {
     @Test
     void getAllSuccess() {
         List<Workout> workouts = dao.getAll();
-        assertEquals(2, workouts.size());
+        assertEquals(3, workouts.size());
     }
 
     /**
@@ -102,7 +104,7 @@ class WorkoutDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Workout> workouts = dao.getByPropertyLike("workout", "30");
-        assertEquals(1, workouts.size());
+        assertEquals(2, workouts.size());
     }
 
     /**

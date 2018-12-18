@@ -15,9 +15,9 @@ import java.util.*;
 
 /**
  * A simple servlet to get a graph of mileage over time.
+ *
  * @author lclemens
  */
-
 @WebServlet(
         urlPatterns = {"/getGraph"}
 )
@@ -69,6 +69,12 @@ public class GetGraph extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * Convert to list list.
+     *
+     * @param workouts the workouts
+     * @return the list
+     */
     public List<Workout> convertToList(Set<Workout> workouts) {
         List<Workout> mainList = new ArrayList<Workout>();
         mainList.addAll(workouts);
@@ -76,6 +82,12 @@ public class GetGraph extends HttpServlet {
         return mainList;
     }
 
+    /**
+     * Get date string.
+     *
+     * @param months the months
+     * @return the string
+     */
     public String getDate(String months){
 
         String monthNames = "";

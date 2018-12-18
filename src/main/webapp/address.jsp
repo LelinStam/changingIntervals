@@ -12,7 +12,7 @@
     </ul>
 		<h3> New Address </h3>
 		<p class="message">${message}</p>
-		<c:remove var="message" />
+		<c:remove var="message" />+
 		${address}
 		<c:remove var="address" />
 		<p>Please fill out the form to create your new address</p>

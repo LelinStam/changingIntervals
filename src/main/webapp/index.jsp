@@ -1,6 +1,5 @@
-﻿<%@include file="head.jsp"%>
-
-
+﻿
+<%@include file="head.jsp"%>
 
 <div id="carouselBlk">
 	<div id="myCarousel" class="carousel slide">
